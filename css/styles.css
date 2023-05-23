@@ -598,7 +598,7 @@ TABLE OF CONTENT
 }
 
 .page-title ul li:after{
-	content: "â—";
+	content: "Ã¢â€”Â";
 	font-size: 13px;
 	display: inline-block;
 	color: #fff;
@@ -838,7 +838,7 @@ TABLE OF CONTENT
 }
 
 .page-title-video ul li:after{
-	content: "â—";
+	content: "Ã¢â€”Â";
 	font-size: 13px;
 	display: inline-block;
 	color: #fff;
@@ -904,7 +904,7 @@ TABLE OF CONTENT
 }
 
 .page-title-small ul li:after{
-	content: ' â— ';
+	content: ' Ã¢â€”Â ';
 	font-size: 11px;
 	font-weight: 600;
 	display: inline-block;
@@ -2704,16 +2704,18 @@ Style 3
 ----------------------*/
 .service-block{
 	position: relative;
+	height: 100%;
+	position: relative;
 	overflow: hidden;
 	background: #fff;
 	border: 1px solid #eee;
 	border-radius: 10px;
-    -webkit-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.08);
-    -moz-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.08);
-    box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.08); 	
+	-webkit-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.08);
+	-moz-box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.08);
+	box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.08);
 	margin: 15px 0px;
 	-webkit-transition-duration: .3s;
-	transition-duration: .3s;	
+	transition-duration: .3s;
 }
 
 .service-block:hover{
@@ -2728,7 +2730,7 @@ Style 3
 }
 
 .service-block-inner{
-	padding: 15px 25px 20px 25px;
+	padding: 15px 25px 40px 25px;
 }
 
 .service-block h6{
@@ -2763,6 +2765,10 @@ Style 3
 	display: block;
 	border-top: 1px solid #ececec;
 	margin-top: 15px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	padding: 5px 0px 20px 0px;
 }
 
 .service-block-button a{
@@ -3524,7 +3530,7 @@ Style 4 (Number Boxes)
 }
 
 .number-box-2 h4:before{
-	content: "â—";
+	content: "Ã¢â€”Â";
 	font-size: 20px;
 	display: inline-block;
 	color: #2387ea;	
@@ -4189,7 +4195,7 @@ Style 4
 
 .testmonial-single h3:before{
 	font-family: 'Libre Baskerville', serif !important;
-	content: 'â€œ';
+	content: 'Ã¢â‚¬Å“';
 	display: block;
 	font-size: 90px;
 	color: #2387ea;
@@ -8994,7 +9000,7 @@ Style 1
 	max-width: 100%;
 }
 .product-tab-body ul li:before{
-  content: "â—";
+  content: "Ã¢â€”Â";
   display: inline-block;
   color: #2387ea;
   font-size: 14px;
@@ -10546,7 +10552,7 @@ Shop Product Review Form
 
 .card-primary a:after{
 	float: right;
-	content: "â€“";
+	content: "Ã¢â‚¬â€œ";
 	font-size: 16px;
 	font-weight: 700;
 	display: inline-block;
@@ -10629,7 +10635,7 @@ Shop Product Review Form
 
 .card-white a:after{
 	float: right;
-	content: "â€“";
+	content: "Ã¢â‚¬â€œ";
 	font-size: 16px;
 	font-weight: 700;
 	display: inline-block;
@@ -10710,7 +10716,7 @@ Shop Product Review Form
 
 .card-white-bordered a:after{
 	float: right;
-	content: "â€“";
+	content: "Ã¢â‚¬â€œ";
 	font-size: 16px;
 	font-weight: 700;
 	display: inline-block;
@@ -10790,7 +10796,7 @@ Shop Product Review Form
 
 .card-grey a:after{
 	float: right;
-	content: "â€“";
+	content: "Ã¢â‚¬â€œ";
 	font-size: 16px;
 	font-weight: 700;
 	display: inline-block;
@@ -13885,3 +13891,13 @@ Style 4
 	z-index: 9999;
 	display: none;
   }
+.service-block img{
+	height: 250px;
+}
+.data-sources{
+	width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 0.5px #0000007d;
+	border-radius: 50%;
+}
