@@ -58,30 +58,6 @@
 
 
 
-<!-- Top-Bar START -->
-<!-- <div id="top-bar" class="hidden-md-down">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-9 col-12">
-				<ul class="top-bar-info">				 
-					<li><i class="fas fa-map-marker-alt"></i>Mohammed VI Polytechnic University, Ben Guerir 43150, Morocco</li>
-					<li><i class="fa fa-envelope"></i>Email:  morsnow@um6p.ma</li>
-				</ul>					
-			</div>
-			<div class="col-md-3 col-12">
-				<ul class="social-icons hidden-sm">				 
-					<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-					<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-				</ul>							
-			</div>		
-		</div>
-	</div>
-</div>	 -->
-<!-- Top-Bar END -->
-
-
 
 <!-- Navbar START -->
 <header>
@@ -89,32 +65,21 @@
 		
 		
 		<div class="nav-header">
-			<a class="nav-brand" href="/">
-				<img src="img/logos/morsnow.png" alt="logo" id="main_logo">
+			<a class="nav-brand" href="">
+				<img src="img/logos/morsnow.png" alt="logo" class="main_logo">
+				<img src="img/logos/ocp.png" alt="logo" class="main_logo">
+				<img src="img/logos/crsa.png" alt="logo" class="main_logo">
 			</a>
 			<div class="nav-toggle"></div>
 		</div>
 
-		<!-- Search START
-		<div class="nav-search">
-			<div class="nav-search-button">
-				<i class="ti-search"></i>
-			</div>
-			<form>
-				<div class="nav-search-inner">
-					<input type="search" name="search" placeholder="Enter your keywords..."/>
-				</div>
-			</form>
-		</div>
-		 Search END -->
 
 		<div class="nav-menus-wrapper">
 			<ul class="nav-menu align-to-right">
 				<li><a href="#">Home</a></li>										
-				<li><a href="#about" class="nav-link">About MorSnow</a></li>
-				<li><a href="#data" class="nav-link">Data</a></li>									
-				<li><a href="#people" class="nav-link">People</a></li>
-				<li><a href="#events" class="nav-link">Seminars and Events</a></li>
+				<li><a href="#about" class="nav-link">About</a></li>
+				<li><a href="#data" class="nav-link">Experimental works</a></li>									
+				<li><a href="#team" class="nav-link">Team</a></li>
 				<li><a href="#publications" class="nav-link">Publications</a></li>
 				<li><a href="#contact" class="nav-link">Contact</a></li>												
 			</ul>
@@ -145,17 +110,17 @@
 		<!-- Slide 1 End -->
 
 		<!-- Slide 2 Start -->
-		<div class="swiper-slide" style="background-image:url(img/content/bgs/header.jpg);">
+		<div class="swiper-slide" style="background-image:url(img/content/home/slide2.jpg); background-size: 100% 100%;">
 			<div class="container">
                 <div class="slider-content center-holder">
-					<h4 class="animated fadeInUp">Center For Remote Sensing Applications</h4>	
-                	<!-- <h4 class="extra-light animated fadeInDown"><b>MorSnow</b><span class="primary-color"> <b>Project</b></span></h4> -->
-                    <h3 class="light animated fadeInDown">Monitoring and Quantifying Snowmelt contribution for Moroccan Water Management strategies in the context of Climate Change</h3>
+					<!-- <h4 class="animated fadeInUp">Center For Remote Sensing Applications</h4>	
+                	 <h4 class="extra-light animated fadeInDown"><b>MorSnow</b><span class="primary-color"> <b>Project</b></span></h4> 
+                    <h3 class="light animated fadeInDown">Monitoring and Quantifying Snowmelt contribution for Moroccan Water Management strategies in the context of Climate Change</h3> -->
                     <div class="animated fadeInUp mt-30">
-                        <!-- <a href="#" class="primary-button semi-rounded button-md w-200"></a>-->
+                         <a href="https://crsa.um6p.ma/news/Seminar-Morsnow-1/?id=6328610293d8ec4fcff976e0" class="primary-button semi-rounded button-md w-200">Learn more</a>
                         <!-- <a href="#" class="white-button-bordered semi-rounded button-md w-200">Learn More</a> -->
                     </div>
-                </div>
+                </div> 
 			</div>
 		</div>
 		<!-- Slide 2 End -->
@@ -277,7 +242,7 @@
 <section class="section section-block bg-white" id="data">
 	<div class="container">
 		<div class="section-heading center-holder wow fadeIn  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
-			<h2 class="bold">Data sources</h2>
+			<h2 class="bold">Experimental works</h2>
 			<div class="section-heading-line"></div>
 		</div>
 		<div class="row">
@@ -350,159 +315,341 @@
 platforms Section END -->
 
 <!-- People START -->
-<div class="section section-block-grey" id="people">
+<div class="section section-block-grey" id="team">
 	<div class="container">
 		<div class="section-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
-			<h2 class="bold"><span class="italic libre-baskerville primary-color">MorSnow </span> People</h2>
+			<h2 class="bold"><span class="italic libre-baskerville primary-color">MorSnow </span> team</h2>
 			<div class="section-heading-line"></div>
 			<p>Contact Us. Sharing for better progress.</p>
 		</div>		
 		<div class="row mt-50">
-			<div class="col-md-6 col-sm-12 col-12 wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
-				<div class="testmonial-box">
+			<div class="owl-carousel owl-theme" id="team-block"> 
+				
+				
+				<div class="team-block">
 					<div class="row">
-						<div class="col-md-2 col-sm-2 pr-0">
-							<div class="testmonial-box-image">
-								<img src="https://crsa.um6p.ma/server/img/people/1613694352210.png" alt="image">
+						
+						 <div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Abdelghani Chehbouni</a></h4>
+								<h6 class="italic libre-baskerville">CRSA program lead</h6>
+								<p>Leader of hydrology group at CESBIO and Associate Dean of Cooperation - College of Sustainable Agriculture 
+									and Environmental Sciences</p>
+								<p></p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/ghani-chehbouni-544b4462"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:abdelghani.chehbouni@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
 							</div>
 						</div>
-						<div class="col-md-10 col-sm-10">
-							<div class="row">
-								<div class="col-md-6 col-sm-6 col-6">
-									<h6>Chehbouni Abdelghani</h6>
-									<span class="primary-color">Program Lead CRSA</span>
-								</div>
-								<div class="col-md-6 col-sm-6 col-6">
-								</div>								
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/chehbouni.png" alt="img">
 							</div>
-							<p>Dr. ABdelghani Chehbouni is a doctor in hydrology and remote sensing, he received his B.S. in fluids Mechanics from University Paul Sabatier, Toulouse, France in 1987 and his M.S. in Environment Science from the National Polytechnic Institute of Toulouse in 1989, and a PhD in Hydrology and Remote Sensing from University Paul Sabatier in Toulouse in 1992. He has been working at the University of Arizona for 18 months and the Jet Propulsion Laboratory for 2 years. He is co-investigator of several Remote Sensing programs (VEGETATION, ERS2/ATSR2, EOS). His main research interests include the application of remotely sensed data in land-surface-atmosphere models especially in arid semi-arid regions. He participates in several international experiments (MONSOON'90, Hapex Sahel) and he wasa co-leader of the Semi-Arid-Land-Surface-Atmosphere (SALSA) international program. He joined CESBIO in 2000 as the leader of hydrology group.</p>
+						</div> 
+					</div>
+				</div>
+				
+				<div class="team-block">
+					<div class="row">
+						
+						 <div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Abdelghani Boudhar</a></h4>
+								<h6 class="italic libre-baskerville">Project investigator</h6>
+								<p>Professor of Geomatic and water resources at Sultan Moulay Slimane University and affiliate Professor in the CRSA - UM6P</p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/abdelghani-boudhar-3b43983b"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:abdelghani.boudhar@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/boudhar.jpg" alt="img">
+							</div>
+						</div> 
+					</div>
+				</div>
+
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Touria Benimira</a></h4>
+								<h6 class="italic libre-baskerville">Senior data scientist</h6>
+								<p>Engineer in charge of data operating and processing</p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/touria-benmira-83445b15a"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:touria.benmira@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/Touria Benmira.jpg" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Ismail Karaoui</a></h4>
+								<h6 class="italic libre-baskerville">Senior research engineer</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/ismail-karaoui-a7924683"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:ismail.karaoui@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/Ismail Karaoui.jpg" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Ayoub Bouihrouchane</a></h4>
+								<h6 class="italic libre-baskerville">Software engineer</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/ayoub-bouihrouchane"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:ayoub.bouihrouchane@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/Ayoub Bouihrouchane.jpg" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Abderrahim laalyej</a></h4>
+								<h6 class="italic libre-baskerville">Technician</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/abderrahim-laalyej-3a6967271"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:Abderrahim.laalyej@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/Abderrahim Laalyej.jpeg" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Bouchra Bargam</a></h4>
+								<h6 class="italic libre-baskerville">Phd candidate</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/bouchra-bargam-86454311a"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:bouchra.bargam@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/Bouchra Bargam.jpg" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Nadia Rhoujatti</a></h4>
+								<h6 class="italic libre-baskerville">Phd candidate</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/nadia-rhoujjati-1a6823224"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:Nadia.Rhoujatti@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/Nadia Rhoujatti.jpg" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Haytam Elyoussfi</a></h4>
+								<h6 class="italic libre-baskerville">Phd candidate</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/haytam-el-youssfi"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:Haytam.Elyoussfi@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/Haytam El Yousfi.jpg" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-7 col-sm-7 col-12">
+							<div class="team-block-text">
+								<h4><a href="#">Mostafa bousbaa</a></h4>
+								<h6 class="italic libre-baskerville">Phd candidate</h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+								<ul>
+									<li> <a href="https://www.linkedin.com/in/mostafa-bousbaa"><i class="fab fa-linkedin"></i></a></li>
+									<li> <a href="mailto:mostafa.bousbaa@um6p.ma"><i class="fab icon-mail"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5 col-12">
+							<div class="team-block-img">
+								<img src="img/content/team/Mustapha Bousbaa.jpg" alt="img">
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			
-
-			<div class="col-md-6 col-sm-12 col-12 wow fadeIn animated" data-wow-delay=".2s" data-wow-duration="1.5s">
-				<div class="testmonial-box">
-					<div class="row">
-						<div class="col-md-2 col-sm-2 pr-0">
-							<div class="testmonial-box-image">
-								<img src="https://crsa.um6p.ma/server/img/people/1613694497756.jpg" alt="image">
-							</div>
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<div class="row">
-								<div class="col-md-6 col-sm-6 col-6">
-									<h6>Boudhar Abdelghani</h6>
-									<span class="primary-color">Project investigator</span>
-								</div>
-								<div class="col-md-6 col-sm-6 col-6">
-									
-								</div>								
-							</div>
-							<p>Abdelghani Boudhar is a Professor of Geomatic and water resources in the Sultan Moulay Slimane University (Morocco). He received his PhD degree in Hydrology and remote sensing from Caddi Ayyad University, Morocco in 2009. Since 2019, He is an affiliate Professor in the Center for Remote Sensing Applications “CRSA” in Mohammed VI Polytechnic University, Morocco. His research area of interest focuses on using remote sensing datasets from multisource sensors to monitor natural resources and simulate hydrological and climate parameters.</p>
-						</div>
-					</div>
-				</div>
-			</div>				
 		</div>
 	</div>
 </div>
 <!-- People END -->
 
-<!-- events Block START -->
-<div class="section section-block" id="events">
-	<div class="container">
-		<div class="section-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
-			<small></small>
-			<h2 class="bold">Seminars and Events of <span class="italic libre-baskerville primary-color">MorSnow</span></h2>
-			<div class="section-heading-line"></div>
-			<p></p>
-		</div>
-		<div class="row mt-40">
-			<div class="col-md-3 col-sm-6 col-12 wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
-				<div class="team-member">
-					<div class="team-member-image">
-						<img src="Affiche_VF.jpg" alt="img">
-						<div class="team-member-overlay">
-							<div class="team-member-content">
-								<!-- <ul>
-									<li><a href=""><i class="fab fa-google"></i></a></li>
-								</ul>								 -->
-							</div>
-						</div>				
-					</div>
-				</div>				
-			</div>
-		</div>	
-	</div>		
-</div>
-
-<!-- events Block END -->
 
 <!-- Papers section START -->
 <div class="section section-block" id="publications">
 	<div class="container">
 		<div class="section-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
-			<h3 class="bold"><span class="italic libre-baskerville primary-color">MorSnow</span>'s publications</h3>
+			<h3 class="bold">publications</h3>
 			<div class="section-heading-line"></div>
-		</div>		
-		<div class="row mt-50">
-
-
-			<div class="col-md-4 col-sm-4 col-12 wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
-				<div class="service-block">
-					<img src="img/content/papers/1.png" alt="img">
-					<div class="service-block-inner">
-						<h6>Paper</h6>
-						<h4>Deep Learning Approach with LSTM for Daily Streamflow Prediction in a Semi-Arid Area: A Case Study of Oum Er-Rbia River Basin, Morocco</h4>
-						<p>January, 2023</p>	
-						<div class="service-block-button">
-							<a href="https://www.researchgate.net/publication/366969980_Deep_Learning_Approach_with_LSTM_for_Daily_Streamflow_Prediction_in_a_Semi-Arid_Area_A_Case_Study_of_Oum_Er-Rbia_River_Basin_Morocco">Learn More <i class="fa fa-chevron-right"></i></a>
-						</div>											
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-4 col-12 wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
-				<div class="service-block">
-					<img src="img/content/papers/2.png" alt="img">
-					<div class="service-block-inner">
-						<h6>Paper</h6>
-						<h4>High-Resolution Monitoring of the Snow Cover on the Moroccan Atlas through the Spatio-Temporal Fusion of Landsat and Sentinel-2 Images</h4>
-						<p>November, 2022</p>	
-						<div class="service-block-button">
-							<a href="https://www.researchgate.net/publication/365499714_High-Resolution_Monitoring_of_the_Snow_Cover_on_the_Moroccan_Atlas_through_the_Spatio-Temporal_Fusion_of_Landsat_and_Sentinel-2_Images">Learn More <i class="fa fa-chevron-right"></i></a>
-						</div>											
-					</div>
-				</div>
-			</div>
-
-			
-
-
-			
-
-			<div class="col-md-4 col-sm-4 col-12 wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
-				<div class="service-block">
-					<img src="img/content/papers/3.png" alt="img">
-					<div class="service-block-inner">
-						<h6>Poster</h6>
-						<h4>LSTM-based Deep Learning Approach for Prediction Snow Depth in Morocco : Case Study Tichki – Draa Valley</h4>
-						<p>November, 2022</p>	
-						<div class="service-block-button">
-							<a href="https://www.researchgate.net/publication/365326777_LSTM-based_Deep_Learning_Approach_for_Prediction_Snow_Depth_in_Morocco_Case_Study_Tichki_-_Draa_Valley">Learn More <i class="fa fa-chevron-right"></i></a>
-						</div>											
-					</div>
-				</div>
-			</div>
-
-
-					
 		</div>
-		<div class="mt-60 center-holder wow fadeIn animated" data-wow-delay=".2s">
-			<a href="#publications" class="primary-button button-sm">See all</a>
+		<div class="medium-icon-tabs-light">
+			<div class='tabs tabs_animate mt-10'>
+				<ul class="tab-menu center-holder">
+					<li class="tab tab-active"><a href="#Papers">Papers</a></li>
+					<!-- <li class="tab"><a href="#Chapters">Chapters</a></li> -->
+					<li class="tab"><a href="#Posters">Posters</a></li>
+				</ul>
+			</div>
+			<div id='Papers' class="clearfix tab-body">
+				<div class="row mt-40">
+					<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="2"  data-md-items="2" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
+						<div class="item">
+							<div class="service-block">
+								<img src="img/content/papers/1.png" alt="img">
+								<div class="service-block-inner">
+									<h6>Paper</h6>
+									<h4>Deep Learning Approach with LSTM for Daily Streamflow Prediction in a Semi-Arid Area: A Case Study of Oum Er-Rbia River Basin, Morocco</h4>
+									<p>January, 2023</p>	
+									<div class="service-block-button">
+										<a href="https://www.researchgate.net/publication/366969980_Deep_Learning_Approach_with_LSTM_for_Daily_Streamflow_Prediction_in_a_Semi-Arid_Area_A_Case_Study_of_Oum_Er-Rbia_River_Basin_Morocco">Learn More <i class="fa fa-chevron-right"></i></a>
+									</div>											
+								</div>
+							</div>
+						</div>	
+						
+						<div class="item">
+							<div class="service-block">
+								<img src="img/content/papers/2.png" alt="img">
+								<div class="service-block-inner">
+									<h6>Paper</h6>
+									<h4>High-Resolution Monitoring of the Snow Cover on the Moroccan Atlas through the Spatio-Temporal Fusion of Landsat and Sentinel-2 Images</h4>
+									<p>November, 2022</p>	
+									<div class="service-block-button">
+										<a href="https://www.researchgate.net/publication/365499714_High-Resolution_Monitoring_of_the_Snow_Cover_on_the_Moroccan_Atlas_through_the_Spatio-Temporal_Fusion_of_Landsat_and_Sentinel-2_Images">Learn More <i class="fa fa-chevron-right"></i></a>
+									</div>											
+								</div>
+							</div>
+						</div>	
+			
+						
+					</div>	
+				</div>
+			</div>
+			<!-- <div id='Chapters' class="clearfix tab-body">
+				<div class="row mt-40">
+					<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="3"  data-md-items="3" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
+						<div class="item">
+							<div class="service-block">
+								<img src="img/content/papers/chapter-1.png" alt="img">
+								<div class="service-block-inner">
+									<h6>Report</h6>
+									<h4>Water Resources Monitoring Over The Atlas Mountains In Morocco Using Satellite Observations And Reanalysis Data</h4>
+									<p>August, 2022</p>	
+									<div class="service-block-button">
+										<a href="https://www.researchgate.net/publication/363102587_Water_Resources_Monitoring_Over_the_Atlas_Mountains_in_Morocco_Using_Satellite_Observations_and_Reanalysis_Data">Learn More <i class="fa fa-chevron-right"></i></a>
+									</div>											
+								</div>
+							</div>
+						</div>
+							
+					</div>	
+				</div>
+			</div> -->
+			<div id='Posters' class="clearfix tab-body">
+				<div class="row mt-40">
+					<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="2"  data-md-items="2" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
+						<div class="item">
+							<div class="service-block">
+								<img src="img/content/papers/3.png" alt="img">
+								<div class="service-block-inner">
+									<h6>Poster</h6>
+									<h4>LSTM-based Deep Learning Approach for Prediction Snow Depth in Morocco : Case Study Tichki – Draa Valley</h4>
+									<p>November, 2022</p>	
+									<div class="service-block-button">
+										<a href="https://www.researchgate.net/publication/365326777_LSTM-based_Deep_Learning_Approach_for_Prediction_Snow_Depth_in_Morocco_Case_Study_Tichki_-_Draa_Valley">Learn More <i class="fa fa-chevron-right"></i></a>
+									</div>											
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="service-block">
+								<img src="img/content/papers/4.png" alt="img">
+								<div class="service-block-inner">
+									<h6>Poster</h6>
+									<h4>A method for robust estimation of snow seasonality metrics from Landsat and Sentinel-2 time series data at national scales with Google Earth Engine. Symposium on Water Management in Semi-arid areas, Tools, Global changes </h4>
+									<p>November, 2022</p>	
+									<div class="service-block-button">
+										<a href="https://www.researchgate.net/publication/365326777_LSTM-based_Deep_Learning_Approach_for_Prediction_Snow_Depth_in_Morocco_Case_Study_Tichki_-_Draa_Valley">Learn More <i class="fa fa-chevron-right"></i></a>
+									</div>											
+								</div>
+							</div>
+						</div>
+							
+					</div>	
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -677,7 +824,7 @@ platforms Section END -->
 		<div class="footer-4-bottom-bar">
 			<div class="row">
 				<div class="col-12  center-holder-xs">
-					<p>Morsnow by <a href="crsa.um6p.ma" class="text-primary">CRSA - UM6P </a> ©2023. All Rights Reserved by MorSnow</p>
+					<p>Morsnow by <a href="https://crsa.um6p.ma" class="text-primary">CRSA - UM6P </a> ©2023. All Rights Reserved by MorSnow</p>
 				</div>
 			</div>
 		</div>
@@ -737,6 +884,15 @@ platforms Section END -->
           }
         });
       });
+
+	  //switch tabs in publications section
+		$(".tab-body").hide();
+		$("#"+$(".tab-active").text()).show();
+		$(".tab").click(function(){
+			$(".tab-body").hide();
+			$("#"+$(this).text()).show();
+		});
+	  
   </script>
 
 </body>
