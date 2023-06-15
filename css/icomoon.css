@@ -1515,27 +1515,29 @@
 .icon-website2:before {
   content: "\eaf0";
 }
-.icon-one:before{
-  content:"1";
+.icon-digit:before{
   font-weight: bold;
   font-family: cursive;
   padding: 0px 12px;
+}
+.icon-one:before{
+  content:"1";
 }
 .icon-two:before{
   content:"2";
-  font-weight: bold;
-  font-family: cursive;
-  padding: 0px 12px;
 }
 .icon-three:before{
   content:"3";
-  font-weight: bold;
-  font-family: cursive;
-  padding: 0px 12px;
 }
 .icon-four:before{
   content:"4";
-  font-weight: bold;
-  font-family: cursive;
-  padding: 0px 12px;
+}
+.icon-2021:before{
+  content:"2021";
+}
+.icon-2022:before{
+  content:"2022";
+}
+.icon-2023:before{
+  content:"2023";
 }
