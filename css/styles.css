@@ -1460,7 +1460,6 @@ d) Lists
     list-style-type: none;
     color: #222;
     font-size: 14px;
-    font-weight: 600;
     margin-top: 15px;  
 }
 .primary-list li i{
@@ -13924,4 +13923,8 @@ Style 4
 }
 .team-block-text {
 	padding: 20px 0px 10px 0px !important;
+}
+.interns h6{
+	color:#2387ea;
+	font-weight: bold;
 }
