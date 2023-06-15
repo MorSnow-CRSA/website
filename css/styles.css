@@ -598,7 +598,7 @@ TABLE OF CONTENT
 }
 
 .page-title ul li:after{
-	content: "Ã¢â€”Â";
+	content: "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ÂÃƒâ€šÃ‚Â";
 	font-size: 13px;
 	display: inline-block;
 	color: #fff;
@@ -838,7 +838,7 @@ TABLE OF CONTENT
 }
 
 .page-title-video ul li:after{
-	content: "Ã¢â€”Â";
+	content: "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ÂÃƒâ€šÃ‚Â";
 	font-size: 13px;
 	display: inline-block;
 	color: #fff;
@@ -904,7 +904,7 @@ TABLE OF CONTENT
 }
 
 .page-title-small ul li:after{
-	content: ' Ã¢â€”Â ';
+	content: ' ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ÂÃƒâ€šÃ‚Â ';
 	font-size: 11px;
 	font-weight: 600;
 	display: inline-block;
@@ -3530,7 +3530,7 @@ Style 4 (Number Boxes)
 }
 
 .number-box-2 h4:before{
-	content: "Ã¢â€”Â";
+	content: "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ÂÃƒâ€šÃ‚Â";
 	font-size: 20px;
 	display: inline-block;
 	color: #2387ea;	
@@ -4195,7 +4195,7 @@ Style 4
 
 .testmonial-single h3:before{
 	font-family: 'Libre Baskerville', serif !important;
-	content: 'Ã¢â‚¬Å“';
+	content: 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“';
 	display: block;
 	font-size: 90px;
 	color: #2387ea;
@@ -4441,21 +4441,21 @@ Style 2
 	display: block;
 	font-size: 55px;
 	font-weight: 300;
-	color: #fff;
+	color: #2387ea;
 }
 
 .countup-block h4{
 	display: inline-block;
 	font-size: 40px;
 	font-weight: 700;
-	color: #fff;
+	color: #000;
 	margin: 5px 0px;
 }
 .countup-block span{
 	display: inline-block;
 	font-size: 40px;
 	font-weight: 900;
-	color: #fff;
+	color: #000;
 	margin: 5px;
 }
 
@@ -4463,9 +4463,16 @@ Style 2
 	font-family: 'Libre Baskerville', serif;
 	font-style: italic;
 	font-size: 15px;
-	font-weight: 300;
-	color: #fff;
-	opacity: .7;
+	font-weight: 700;
+	color: #2387ea;
+}
+
+
+#tooltip {
+	background: #fff;
+	border-radius: 5px;
+	padding: 5px;
+	color:#2387ea;
 }
 
 
@@ -9000,7 +9007,7 @@ Style 1
 	max-width: 100%;
 }
 .product-tab-body ul li:before{
-  content: "Ã¢â€”Â";
+  content: "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬ÂÃƒâ€šÃ‚Â";
   display: inline-block;
   color: #2387ea;
   font-size: 14px;
@@ -10552,7 +10559,7 @@ Shop Product Review Form
 
 .card-primary a:after{
 	float: right;
-	content: "Ã¢â‚¬â€œ";
+	content: "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ";
 	font-size: 16px;
 	font-weight: 700;
 	display: inline-block;
@@ -10635,7 +10642,7 @@ Shop Product Review Form
 
 .card-white a:after{
 	float: right;
-	content: "Ã¢â‚¬â€œ";
+	content: "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ";
 	font-size: 16px;
 	font-weight: 700;
 	display: inline-block;
@@ -10716,7 +10723,7 @@ Shop Product Review Form
 
 .card-white-bordered a:after{
 	float: right;
-	content: "Ã¢â‚¬â€œ";
+	content: "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ";
 	font-size: 16px;
 	font-weight: 700;
 	display: inline-block;
@@ -10796,7 +10803,7 @@ Shop Product Review Form
 
 .card-grey a:after{
 	float: right;
-	content: "Ã¢â‚¬â€œ";
+	content: "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ";
 	font-size: 16px;
 	font-weight: 700;
 	display: inline-block;
@@ -13904,6 +13911,12 @@ Style 4
 
 .team-block-img{
 	height: 100%;
+}
+.experimental-works-img{
+	height:100%;
+}
+.experimental-works-img img{
+	height:350px;
 }
 .team-block-img img{
 	height: 250px;
