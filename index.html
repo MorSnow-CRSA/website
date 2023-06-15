@@ -3,7 +3,8 @@
 <head>
 	<title>MorSnow</title>
 	<meta charset="UTF-8">
-	<link rel="shortcut icon" href="" />	
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Bootstrap CSS-->
@@ -15,6 +16,11 @@
 	<!-- Font-Awesome -->
 	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">  
 
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/fontawesome.css">  
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/solid.css">  
+	<!-- <link rel="stylesheet" type="text/css" href="font-awesome/css/regular.css">   -->
+
+	<!-- <link href="font-awesome/webfonts/fa-solid-900.ttf"> -->
 	<!-- Icomoon -->
 	<link rel="stylesheet" type="text/css" href="css/icomoon.css"> 	
 
@@ -78,8 +84,8 @@
 			<ul class="nav-menu align-to-right">
 				<li><a href="#">Home</a></li>										
 				<li><a href="#about" class="nav-link">About</a></li>
-				<li><a href="#data" class="nav-link">Experimental works</a></li>									
 				<li><a href="#team" class="nav-link">Team</a></li>
+				<li><a href="#experimental" class="nav-link">Experimental works</a></li>									
 				<li><a href="#publications" class="nav-link">Publications</a></li>
 				<li><a href="#contact" class="nav-link">Contact</a></li>												
 			</ul>
@@ -157,11 +163,57 @@
 				</iframe>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row pt-5 pb-15">
+			<div class="col-md-3 col-sm-6 col-12">
+				<div class="countup-block">
+					<div id="tooltip" display="none" style="position: absolute; display: none;"></div>
+					<i style="
+						height: 55Px;
+						background-image: url(&quot;img/content/svg/basins.Svg&quot;);
+						background-size: 136% 187%;
+						background-position: 42%;">	
+					</i>
+					
+					<span>+</span>
+					<h4 class="countup">72000 </h4><span>KM²</span>
+					<h5>2 Basins</h5>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6 col-12">
+				<div class="countup-block">
+					<!-- <i class="icon-compass"></i> -->
+					<i class="fa-solid fa-water"></i>
+					<span>+</span><h4 class="countup">25</h4>
+					<h5>Water dam</h5>
+				</div>
+			</div>			
+
+			<div class="col-md-3 col-sm-6 col-12">
+				<div class="countup-block">
+					<!-- <i class="icon-target3"></i> -->
+					<i class="fa-solid fa-cloud-rain"></i>
+
+					<h4 class="countup">120 </h4><span>+</span>
+					<h5>Rainfall station</h5>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6 col-12">
+				<div class="countup-block">
+					<!-- <i class="icon-trophy3"></i> -->
+					<i class="fa-solid fa-gauge"></i>
+					<h4 class="countup">50 </h4><span>+</span>
+					<h5>Gauged station</h5>
+				</div>
+			</div>							
+		</div>
+		<div class="row pt-10">
 			<div class="col-md-5 col-sm-12 col-12 wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
 				<img src="img/content/home/mission.png" class="rounded-border shadow-primary full-width" alt="img">
 			<!-- Process Steps Start -->
 					<!-- Process Steps Start -->
+					
 					<div class="mt-40 wow fadeIn animated" data-wow-delay=".25s">
 						<div class="process-steps-xs">
 							<ul class="left-holder row">
@@ -239,52 +291,6 @@
 </div>
 <!-- about Section END -->
 
-<!-- Data Section START -->
-<section class="section section-block bg-white" id="data">
-	<div class="container">
-		<div class="section-heading center-holder wow fadeIn  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
-			<h2 class="bold">Experimental works</h2>
-			<div class="section-heading-line"></div>
-		</div>
-		<div class="row">
-			<div data-aos="fade-up" name="featurebox" class="col-12 col-md-4 aos-init aos-animate">
-				<div class="features mt-5">
-					<div class="position-relative justify-content-center d-flex">
-						<img src="img/content/home/reanalysis.jpg" class="data-sources" alt="">
-					</div>
-					<div class="content mt-4">
-						<p class="text-center mb-0">
-							<b>Reanalysis data</b> refers to a comprehensive and consistent set of meteorological observations that are used to create a detailed historical record of weather conditions. It combines data from various sources, such as satellites, weather stations, and ocean buoys, using advanced mathematical models to generate a gridded dataset spanning a specific time period. 
-						</p>
-					</div>
-				</div>
-			</div>
-			<div data-aos="fade-up" name="featurebox" class="col-12 col-md-4 aos-init aos-animate">
-				<div class="features mt-5">
-					<div class="position-relative justify-content-center d-flex">
-						<img src="img/content/home/satellite.jpg" class="data-sources" alt="" >
-					</div>
-					<div class="content mt-4">
-						<p class="text-center mb-0">
-							<b>Satellite data</b> crucial information obtained from satellite observations, providing insights into the extent and variability of snow cover across regions, assisting in monitoring snow-related processes, climate analysis, and water resource management.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div data-aos="fade-up" name="featurebox" class="col-12 col-md-4 aos-init aos-animate">
-				<div class="features mt-5">
-					<div class="position-relative justify-content-center d-flex">
-						<img src="img/content/home/stations.jpg" class="data-sources" alt="">
-					</div>
-					<div class="content mt-4">
-						<p class="text-center mb-0"><b>Ground weather data: </b> vital information collected from in situ weather stations, offering detailed observations of atmospheric conditions at specific locations, enabling accurate weather forecasting, climate analysis, and providing essential input for various applications such as agriculture, aviation, and disaster preparedness.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Data Section END -->
 
 
 <!-- platforms Section START
@@ -317,11 +323,12 @@ platforms Section END -->
 
 <!-- People START -->
 
-<div class="section-block pt-0 pb-0" id="team">
+<div class="section-block pt-15 pb-15" id="team">
 	<div class="container">
 		<div class="section-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
 			<h2 class="bold"><span class="italic libre-baskerville primary-color">MorSnow </span> team</h2>
 			<div class="section-heading-line"></div>
+			<p>Contact Us. Sharing for better progress.</p>
 		</div>		
 			
 		<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="4"  data-md-items="3" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
@@ -646,11 +653,72 @@ platforms Section END -->
 <!-- People END -->
 
 
+<!-- Data Section START -->
+<div class="section-block pt-15 pb-15" id="experimental">
+	<div class="container">
+		<div class="section-heading center-holder wow fadeIn  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+			<h2 class="bold">Experimental works</h2>
+			<div class="section-heading-line"></div>
+		</div>
+
+		<div class="process-steps-sm process-steps-background">
+			<ul class="center-holder row">
+				<li class="col">
+					<div class="process-step-sm center-holder">
+						<div class="process-step-icon">
+							<i class="icon-one"></i>
+						</div>
+						<h3><a href="#">February 6, 2023</a></h3>
+						<p>A team of researchers conducted a data collection campaign in Oukaimden, focusing on measuring snow height, density, and related variables. They used snow probing and density gauges to gather accurate data at multiple locations. The campaign aimed to understand the snow conditions in the area.</p>
+					</div>									
+				</li>
+				<li class="col">
+					<div class="process-step-sm center-holder">
+						<div class="process-step-icon">
+							<i class="icon-two"></i>
+						</div>
+						<h3><a href="#">February 14, 2023</a></h3>
+						<p>A second data collection campaign took place in Oukaimden, focusing on snow height, density, and relevant variables. Building on the previous campaign, the team gathered additional data to track changes over time and identify any variations in the snowpack. The research aimed to contribute to ongoing studies and inform snow-related activities in the region.
+						</p>
+					</div>									
+				</li>
+							
+			</ul>
+		</div>	
+
+		<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="3"  data-md-items="3" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
+			<div class="item experimental-works-img">
+				<img src="img/content/experimental works/1.jpg" alt="img">
+			</div>
+			<div class="item experimental-works-img">
+				<img src="img/content/experimental works/2.jpg" alt="img">
+			</div>
+			<div class="item experimental-works-img">
+				<img src="img/content/experimental works/3.jpg" alt="img">
+			</div>
+			<div class="item experimental-works-img">
+				<img src="img/content/experimental works/4.jpg" alt="img">
+			</div>
+			<div class="item experimental-works-img">
+				<img src="img/content/experimental works/5.jpg" alt="img">
+			</div>
+			<div class="item experimental-works-img">
+				<img src="img/content/experimental works/6.jpg" alt="img">
+			</div>
+			<div class="item experimental-works-img">
+				<img src="img/content/experimental works/7.jpg" alt="img">
+			</div>								
+		</div>							
+	</div>
+</div>
+<!-- Data Section END -->
+
+
 <!-- Papers section START -->
 <div class="section section-block" id="publications">
 	<div class="container">
 		<div class="section-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
-			<h3 class="bold">publications</h3>
+			<h3 class="bold">Publications</h3>
 			<div class="section-heading-line"></div>
 		</div>
 		<div class="medium-icon-tabs-light">
@@ -658,7 +726,7 @@ platforms Section END -->
 				<ul class="tab-menu center-holder">
 					<li class="tab tab-active"><a href="#Papers">Papers</a></li>
 					<!-- <li class="tab"><a href="#Chapters">Chapters</a></li> -->
-					<li class="tab"><a href="#Posters">Posters</a></li>
+					<li class="tab"><a href="#Communications">Communications</a></li>
 				</ul>
 			</div>
 			<div id='Papers' class="clearfix tab-body">
@@ -690,41 +758,37 @@ platforms Section END -->
 									</div>											
 								</div>
 							</div>
-						</div>	
+						</div>
+						
+						<div class="item">
+							<div class="service-block">
+								<img src="img/content/papers/6.png" alt="img">
+								<div class="service-block-inner">
+									<h6>Paper</h6>
+									<h4>When climate variability partly compensates for groundwater depletion: An analysis of the GRACE signal in Morocco</h4>
+									<p>July, 2022</p>	
+									<div class="service-block-button">
+										<a href="https://www.researchgate.net/publication/362093116_When_climate_variability_partly_compensates_for_groundwater_depletion_An_analysis_of_the_GRACE_signal_in_Morocco">Learn More <i class="fa fa-chevron-right"></i></a>
+									</div>											
+								</div>
+							</div>
+						</div>
 			
 						
 					</div>	
 				</div>
 			</div>
-			<!-- <div id='Chapters' class="clearfix tab-body">
-				<div class="row mt-40">
-					<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="3"  data-md-items="3" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
-						<div class="item">
-							<div class="service-block">
-								<img src="img/content/papers/chapter-1.png" alt="img">
-								<div class="service-block-inner">
-									<h6>Report</h6>
-									<h4>Water Resources Monitoring Over The Atlas Mountains In Morocco Using Satellite Observations And Reanalysis Data</h4>
-									<p>August, 2022</p>	
-									<div class="service-block-button">
-										<a href="https://www.researchgate.net/publication/363102587_Water_Resources_Monitoring_Over_the_Atlas_Mountains_in_Morocco_Using_Satellite_Observations_and_Reanalysis_Data">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-							
-					</div>	
-				</div>
-			</div> -->
-			<div id='Posters' class="clearfix tab-body">
+			
+			<div id='Communications' class="clearfix tab-body">
 				<div class="row mt-40">
 					<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="2"  data-md-items="2" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
+						
 						<div class="item">
 							<div class="service-block">
 								<img src="img/content/papers/3.png" alt="img">
 								<div class="service-block-inner">
 									<h6>Poster</h6>
-									<h4>LSTM-based Deep Learning Approach for Prediction Snow Depth in Morocco : Case Study Tichki – Draa Valley</h4>
+									<h4>LSTM-based Deep Learning Approach for Prediction Snow Depth in Morocco : Case Study Tichki – Draa Valley<br><br></h4>
 									<p>November, 2022</p>	
 									<div class="service-block-button">
 										<a href="https://www.researchgate.net/publication/365326777_LSTM-based_Deep_Learning_Approach_for_Prediction_Snow_Depth_in_Morocco_Case_Study_Tichki_-_Draa_Valley">Learn More <i class="fa fa-chevron-right"></i></a>
@@ -735,13 +799,56 @@ platforms Section END -->
 						
 						<div class="item">
 							<div class="service-block">
-								<img src="img/content/papers/4.png" alt="img">
+								<img src="img/content/papers/5.png" alt="img">
 								<div class="service-block-inner">
 									<h6>Poster</h6>
-									<h4>A method for robust estimation of snow seasonality metrics from Landsat and Sentinel-2 time series data at national scales with Google Earth Engine. Symposium on Water Management in Semi-arid areas, Tools, Global changes </h4>
+									<h4>A method for robust estimation of snow seasonality metrics from Landsat
+										and Sentinel-2 time series data at national scales with Google Earth Engine</h4>
 									<p>November, 2022</p>	
 									<div class="service-block-button">
-										<a href="https://www.researchgate.net/publication/365326777_LSTM-based_Deep_Learning_Approach_for_Prediction_Snow_Depth_in_Morocco_Case_Study_Tichki_-_Draa_Valley">Learn More <i class="fa fa-chevron-right"></i></a>
+										<a href="https://gesoc2022.sciencesconf.org/416350">Learn More <i class="fa fa-chevron-right"></i></a>
+									</div>											
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="service-block">
+								<img src="img/content/papers/4.png" alt="img">
+								<div class="service-block-inner">
+									<h6>Presentation</h6>
+									<h4>A Spatio-Temporal Fusion Approach of Landsat and Sentinel-2 Images for Snow Cover Mapping in the Moroccan Atlas.</h4>
+									<p>November, 2022</p>	
+									<div class="service-block-button">
+										<a href="https://www.researchgate.net/publication/365607938_A_Spatio-Temporal_Fusion_Approach_of_Landsat_and_Sentinel-2_Images_for_Snow_Cover_Mapping_in_the_Moroccan_Atlas">Learn More <i class="fa fa-chevron-right"></i></a>
+									</div>											
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="service-block">
+								<img src="img/content/papers/7.png" alt="img">
+								<div class="service-block-inner">
+									<h6>Poster</h6>
+									<h4>Streamflow prediction using machine learning techniques: application case in the Moroccan Atlas sub-basin</h4>
+									<p>November, 2022</p>	
+									<div class="service-block-button">
+										<a href="https://gesoc2022.sciencesconf.org/428585/">Learn More <i class="fa fa-chevron-right"></i></a>
+									</div>											
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="service-block">
+								<img src="img/content/papers/chapter-1.png" alt="img">
+								<div class="service-block-inner">
+									<h6>Book chapter</h6>
+									<h4>Water Resources Monitoring Over The Atlas Mountains In Morocco Using Satellite Observations And Reanalysis Data</h4>
+									<p>August, 2022</p>	
+									<div class="service-block-button">
+										<a href="https://www.researchgate.net/publication/363102587_Water_Resources_Monitoring_Over_the_Atlas_Mountains_in_Morocco_Using_Satellite_Observations_and_Reanalysis_Data">Learn More <i class="fa fa-chevron-right"></i></a>
 									</div>											
 								</div>
 							</div>
@@ -961,6 +1068,19 @@ platforms Section END -->
 <script src="js/main.js"></script>
 
 <script>
+	// show tooltip when mouseover on basins svg
+	function showTooltip(evt, text) {
+		let tooltip = document.getElementById("tooltip");
+		tooltip.innerHTML = text;
+		tooltip.style.display = "block";
+		tooltip.style.left = evt.pageX + 10 + 'px';
+		tooltip.style.top = evt.pageY + 10 + 'px';
+	}
+	// hide tooltip when mouse out on basins svg
+	function hideTooltip() {
+		var tooltip = document.getElementById("tooltip");
+		tooltip.style.display = "none";
+	}
     $(document).ready(function() {
       // Smooth scrolling animation when clicking on a navbar link
       $(".nav-link").on("click", function(event) {
