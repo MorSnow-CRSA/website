@@ -1515,3 +1515,15 @@
 .icon-website2:before {
   content: "\eaf0";
 }
+.icon-one:before{
+  content:"1";
+  font-weight: bold;
+  font-family: cursive;
+  padding: 0px 12px;
+}
+.icon-two:before{
+  content:"2";
+  font-weight: bold;
+  font-family: cursive;
+  padding: 0px 12px;
+}
