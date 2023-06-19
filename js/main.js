@@ -1001,3 +1001,40 @@ if ($(".full-height").length > 0) {
 
     $el.ripples('drop', x, y, dropRadius, strength);
   }, 400);
+
+
+  
+  $(document).ready(function() {
+    // Smooth scrolling animation when clicking on a navbar link
+    $(".nav-link").on("click", function(event) {
+      event.preventDefault();
+      var target = $(this).attr("href");
+      $('html, body').animate({
+        scrollTop: $(target).offset().top
+      }, 1000);
+    });
+
+  // show interns on loading
+  $("#tab-2021-pfe").show();
+  });
+$(window).on("scroll", function() {
+      var scrollPos = $(window).scrollTop();
+      $(".section").each(function() {
+        var sectionTop = $(this).offset().top - 100;
+        var sectionBottom = sectionTop + $(this).outerHeight();
+
+        if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+          var targetId = $(this).attr("id");
+          $(".nav-link").removeClass("active");
+          $('a[href="#' + targetId + '"]').addClass("active");
+        }
+      });
+    });
+
+//switch tabs in publications section
+$(".tab-body").hide();
+$("#"+$(".tab-active").text()).show();
+$(".tab").click(function(){
+  $(".tab-body").hide();
+  $("#"+$(this).text()).show();
+});
