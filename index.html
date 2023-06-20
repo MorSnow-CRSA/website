@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Bootstrap CSS-->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -44,7 +44,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css" id="main_styles">
 
 	<!-- Fonts Google -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -100,15 +100,13 @@
 <div class="section swiper-main-slider swiper-container black-overlay-20">
 	<div class="swiper-wrapper">
 		<!-- Slide 1 Start -->
-			<div class="swiper-slide" style="background-image:url('img/content/home/Satellite-2.webp');">
+			<div class="swiper-slide" data-bgimage='img/content/home/Satellite-2.webp'>
 			<div class="container">
                 <div class="slider-content center-holder">
                 	<h4 class="extra-light animated fadeInDown"><b>MorSnow</b><span class="primary-color"> <b>Project</b></span></h4>
                     <h3 class="light animated fadeInDown">Monitoring and Quantifying Snowmelt contribution for Moroccan Water Management strategies in the context of Climate Change</h3>
                     <h5 class="animated fadeInUp">Center For Remote Sensing Applications</h5>	
                     <div class="animated fadeInUp mt-30">
-                        <!-- <a href="#" class="primary-button semi-rounded button-md w-200"></a>-->
-                        <!-- <a href="#" class="white-button-bordered semi-rounded button-md w-200">Learn More</a> -->
                     </div>
                 </div>
 			</div>
@@ -116,15 +114,11 @@
 		<!-- Slide 1 End -->
 
 		<!-- Slide 2 Start -->
-		<div class="swiper-slide" style="background-image:url(img/content/home/slide1.webp); background-size: 100% 100%;">
+		<div class="swiper-slide" data-bgimage='img/content/home/slide1.webp'>
 			<div class="container">
                 <div class="slider-content center-holder">
-					<!-- <h4 class="animated fadeInUp">Center For Remote Sensing Applications</h4>	
-                	 <h4 class="extra-light animated fadeInDown"><b>MorSnow</b><span class="primary-color"> <b>Project</b></span></h4> 
-                    <h3 class="light animated fadeInDown">Monitoring and Quantifying Snowmelt contribution for Moroccan Water Management strategies in the context of Climate Change</h3> -->
-                    <div class="animated fadeInUp mt-30">
+					 <div class="animated fadeInUp mt-30">
                          <a href="https://crsa.um6p.ma/news/Seminar-Morsnow-1/?id=6328610293d8ec4fcff976e0" class="primary-button semi-rounded button-md w-200">Learn more</a>
-                        <!-- <a href="#" class="white-button-bordered semi-rounded button-md w-200">Learn More</a> -->
                     </div>
                 </div> 
 			</div>
@@ -133,10 +127,10 @@
 				
 	</div>
 	<!-- Add Arrows -->
-	<!-- <div class="swiper-button-next"></div>
-	<div class="swiper-button-prev"></div> -->
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
     <!-- Add Pagination -->
-    <!-- <div class="swiper-pagination"></div>	 -->
+    <div class="swiper-pagination"></div>	
 </div>
 <!-- Slider END -->
 
@@ -290,36 +284,6 @@
 	</div>
 </div>
 <!-- about Section END -->
-
-
-
-<!-- platforms Section START
-<div id="platforms" class="section section-block-parallax jarallax black-overlay-20" data-jarallax data-speed="0.6"  style="background-image: url('https://crsa.um6p.ma/static/media/image11.b042b084.jpeg');">
-	<div class="container">
-		<div class="large-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
-			<h2 class="white-color">MorSnow Platforms</h2>
-			<div class="section-heading-line"></div>
-		</div>
-		<div class="row mt-50">
-			MDPP 
-			<div class="col-md-6 col-sm-6 col-12 wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
-				<div class="service-block">
-					<img loading="lazy" src="http://via.placeholder.com/458x524" alt="img" class="platforms-images">
-					<div class="service-block-inner">
-						<h6>MorSnow data preprocessing platform</h6>
-						<div class="service-block-button">
-							<a href="#">Explore it! <i class="fa fa-chevron-right"></i></a>
-						</div>											
-					</div>
-				</div>
-			</div>
-
-		
-		</div>
-		
-	</div>
-</div>
-platforms Section END -->
 
 <!-- team START -->
 
@@ -943,7 +907,7 @@ platforms Section END -->
 <!-- Partners Carousel END -->
 
 <!-- Contact Form Section START -->
-<div id="contact" class="section section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6"  style="background-image: url('img/content/home/footer-bg.webp');">
+<div id="contact" class="section section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6"  data-bgimage="img/content/home/footer-bg.webp">
 	<div class="container">
 		<div class="section-heading white-color left-holder wow fadeIn animated" data-wow-delay=".1s">
 			<h2 class="bold">Get answers</h2>
@@ -1024,5 +988,44 @@ platforms Section END -->
 <!-- Main JS -->
 <script src="js/main.js" defer></script>
 
+
+<script>
+	// Check for IntersectionObserver support
+	if ('IntersectionObserver' in window) {
+	  document.addEventListener("DOMContentLoaded", function() {
+	
+		function handleIntersection(entries) {
+		  entries.map((entry) => {
+			if (entry.isIntersecting) {
+			  // Item has crossed our observation
+			  // threshold - load src from data-src
+			  entry.target.style.backgroundImage = "url('"+entry.target.dataset.bgimage+"')";
+			  // Job done for this item - no need to watch it!
+			  observer.unobserve(entry.target);
+			}
+		  });
+		}
+	
+		
+		const observer = new IntersectionObserver(
+		  handleIntersection,
+		  { rootMargin: "100px" }
+		);
+		const footer = document.querySelectorAll('#contact');
+		footer.forEach( footer => observer.observe(footer));
+
+		const slides = document.querySelectorAll('.swiper-slide');
+		slides.forEach(slides => observer.observe(slides));
+
+		
+	  });
+	} else {
+	  // No interaction support? Load all background images automatically
+	  const headers = document.querySelectorAll('#contact');
+	  headers.forEach(header => {
+		header.style.backgroundImage = "url('"+header.dataset.bgimage+"')";
+	  });
+	}
+	</script>
 </body>
 </html>
