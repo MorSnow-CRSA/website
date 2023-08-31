@@ -1010,7 +1010,7 @@ if ($(".full-height").length > 0) {
       event.preventDefault();
       var target = $(this).attr("href");
       $('html, body').animate({
-        scrollTop: $(target).offset().top
+        scrollTop: $(target).offset().top-100
       }, 1000);
     });
 
