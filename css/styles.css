@@ -4496,3 +4496,8 @@ svg {
 .icon-2023:before {
     content: "2023"
 }
+
+.experimental-works-sites{
+    height: 350px;
+    width: 100%;
+}
