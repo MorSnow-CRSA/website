@@ -1270,9 +1270,7 @@ body {
     display: inline-block;
     text-align: center;
     font-size: 10px;
-    font-weight: 600;
-    padding: 8px 17px 8px 17px;
-    margin: 5px 0
+    padding: 2px 5px;
 }
 
 .button-sm {
