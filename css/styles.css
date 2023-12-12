@@ -4444,7 +4444,8 @@ svg {
 }
 
 .experimental-works-img img {
-    height: 350px
+    height: 350px;
+    border-radius:20px;
 }
 
 .team-block-img img {
