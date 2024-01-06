@@ -1,1093 +1,1403 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en">
+
 <head>
-	<title>MorSnow</title>
-	<meta charset="UTF-8">
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-	<meta name="description" content="MorSnow-2 website, Morsnow is a research project focusing on monitoring and Quantifying Snowmelt contribution for Moroccan Water Management strategies in the context of Climate Change">
+  <title>MorSnow</title>
+  <meta content="Monitoring and Quantifying Snowmelt contribution for Moroccan Water Management strategies in the context of Climate Change" name="description">
+  <meta content="MorSnow, UM6P, CRSA, Snow cover, hydrology, Morocco, Tensift, Oum Er-Rabia, Water, Snow Water equivalent, remote, sensing, applications" name="keywords">
 
-	<!-- Bootstrap CSS-->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <link href="favicon.ico" rel="apple-touch-icon">
 
-	<!-- Themify icons -->
-	<link rel="stylesheet" type="text/css" href="css/themify-icons.css">
-	
-	<!-- Font-Awesome -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">   -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Nunito:300,400,600,700" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="font-awesome/css/all.min.css"> 
-	<link rel="stylesheet" type="text/css" href="font-awesome/css/fontawesome.min.css"> 
-	<link rel="stylesheet" type="text/css" href="font-awesome/css/solid.min.css"> 
-	<!-- Icomoon -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/icomoon.css"> 	 -->
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-	<!-- Plugins -->
-	<link rel="stylesheet" type="text/css" href="css/plugins.css">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/leaflet.css"/>
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">	
-
-	<!-- Owl Carousel  -->
-    <!-- <link rel="stylesheet" href="css/owl.carousel.css">   -->
-
-	<!-- Swiper Slider Styles -->
-    <!-- <link rel="stylesheet" href="css/slider.css">        -->
-
-    <!-- Navbar Styles -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/navigation.css" id="navigation_menu"> -->
-	
-	<!-- Main Styles -->
-	<!-- <link rel="stylesheet" type="text/css" href="css/default.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/styles.css" id="main_styles">
-
-	<!-- Fonts Google -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800,900" rel="stylesheet"> -->
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800,900" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800,900"></noscript>
+  <style>
+    #sites_map {
+            height: 300px;
+            width:100%;
+        }
+        i.sites{
+            height: 20px;
+            width : 20px;
+            content: url('assets/img/content/icons/Full_Star_Yellow.svg.png');
+        }
+  </style>
 </head>
+
 <body>
 
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+      <!-- <h1 class="logo"><a href="index.html">MorSnow</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo"><img src="assets/img/logos/all_logos.webp" alt="" class="img-fluid"></a>
 
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto " href="#experimental">Experimental works</a></li>
+          <li><a class="nav-link scrollto " href="#events">Events & Seminars</a></li>
+          <li><a class="nav-link scrollto " href="#publications">Publications</a></li>
+          <li><a class="nav-link scrollto " href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
-<!-- Preloader Start-->
-<div id="preloader">
-	<div class="row loader">
-		<div class="loader-icon"></div>
-	</div>
-</div>
-<!-- Preloader End -->
+    </div>
+  </header><!-- End Header -->
 
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
 
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-xl-9 col-lg-12 pt-3 pt-lg-0 order-2 order-lg-1 text-center d-flex flex-column justify-content-center">
+          <h1>MorSnow Research Program</h1>
+          <h2>Monitoring and Quantifying Snowmelt contribution for Moroccan Water Management strategies in the context of Climate Change </h2>
+          <div>
+            <a href="https://crsa.um6p.ma/" >
+              <button class="btn-get-started">About CRSA</button>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
 
+  </section><!-- End Hero -->
 
-<!-- Navbar START -->
-<header>
-	<nav id="navigation4" class="container navigation">
-		
-		
-		<div class="nav-header">
-			<a class="nav-brand" href="#">
-				<img loading="lazy" src="img/logos/all_logos.webp" alt="logo" height="80" width="300" class="main_logo">
-				<img loading="lazy" src="img/logos/ocp.webp" alt="logo" height="50" width="50" class="main_logo">
-				<!-- <img loading="lazy" src="img/logos/crsa.webp" alt="logo" height="60" width="200" class="main_logo"> -->
-			</a>
-			<div class="nav-toggle"></div>
-		</div>
+  <main id="main">
 
-
-		<div class="nav-menus-wrapper">
-			<ul class="nav-menu align-to-right">
-				<li><a href="#">Home</a></li>										
-				<li><a href="#about" class="nav-link">About</a></li>
-				<li><a href="#team" class="nav-link">Team</a></li>
-				<li><a href="#experimental" class="nav-link">Experimental works</a></li>
-				<li><a href="#events" class="nav-link">Events & seminars</a></li>									
-				<li><a href="#publications" class="nav-link">Publications</a></li>
-				<li><a href="#contact" class="nav-link">Contact</a></li>												
-			</ul>
-		</div>					
-	</nav>	
-</header>	
-<!-- Navbar END -->
-
-
-
-<!-- Slider START -->
-<div class="main-video-section">
-	<div class="video-area" id="video-area">
-		<div class="black-overlay-80">
-			<div class="main-video-content" style="background:url('img/content/bgs/header2.webp');background-size: cover; height:85vh">
-				<div class="container">
-					<div class="white-color" style="text-shadow: 0 0 10px #000000">
-						<h4 class="bold">MorSnow Research Program</h4>
-						<div class="mt-35">
-							<h5>Monitoring and Quantifying Snowmelt contribution for Moroccan Water Management strategies in the context of Climate Change</h5>
-						</div>
-						<div class="mt-60">
-							<a href="https://crsa.um6p.ma/" class="primary-button button-md">About CRSA</a>
-						</div>
-					</div> 					
-				</div>       	
-			</div>
-		</div>
-	</div>	
-</div>
-<!-- Slider END -->
-
-<!-- About Section START -->
-<div class="section section-block" id="about">
-	<div class="container">
-		<div class="section-heading center-holder mt-10 wow fadeIn animated" data-wow-delay=".1s">
-			<h3 class="bold">About <span class="italic libre-baskerville primary-color">MorSnow</span></h3>
-			<div class="section-heading-line"></div>
-		</div>
-		<div class="row">
-			<div class="col-md-5 col-sm-12 col-12">
-				
-				<div class="text-content wow fadeIn animated" data-wow-delay=".15s">
-					<p style="text-align: justify;">The principal rivers in Morocco originate from the mountain ranges (Atlas and Rif). These regions play the role of a water tower for the downstream lands by providing a significant volume of the superficial water for aquifers alimentation and dam recharge. The agriculture sector is considered as the primary consumer of the supplied water. Due to the orographic effect, air temperature decreases significantly by altitude, and precipitation falls as liquid or solid forms. Consequently, head watersheds with elevations above 1400 meters are covered with snow and receive an enhanced precipitation rate in snowfall in the cold season. As measured on the southern (Mgoun) and the northern (Ourika) slopes of the High Atlas range, snowfall represents between 20% and 80% of total precipitation depending on the elevation and season.</p>
-					<p style="text-align: justify;">Considering water scarcity and climate change constraints, proper water resources management is becoming a national priority. It is necessary to understand and quantify water fluxes redistribution at the catchment scale to design and implement accurate management plans for water resources. Despite the importance of the snow component, high watersheds are almost devoid of ground observations causing a gap in water budget calculations. Remote sensing technologies proved to provide reliable information to monitor snow cover areas (SCA).</p>
-				</div>
-				<div class="mt-15 wow fadeIn animated" data-wow-delay=".2s">
-					<a href="https://crsa.um6p.ma/projects/Monitoring-and-Quantifying-Snowmelt-contribution-for-Moroccan-Water-Management-strategies-in-the-context-of-Climate-Change--1st-Phase-(MorSnow-1)/?id=6033bc14f098326b3be26473" class="primary-button button-sm">Learn More</a>
-				</div>
-			</div>
-			<div class="col-md-7 col-sm-12 col-12 wow fadeIn animated" data-wow-delay=".2s" data-wow-duration="1.5s">
-				<iframe src="leaflet.html" style="width: 100%; height: 500px" defer>
-				</iframe>
-				<div class="row">
-					<div class="col-md-3 col-sm-6 col-12">
-						<div class="countup-block">
-							<div id="tooltip" display="none" style="position: absolute; display: none;"></div>
-							<span></span>
-							<h4 class="countup">2</h4>
-							<h5>Basins</h5>
-						</div>
-					</div>
-		
-					<div class="col-md-3 col-sm-6 col-12">
-						<div class="countup-block">
-							<!-- <i class="icon-compass"></i> -->
-							<!-- <i class="fa-solid fa-water"></i> -->
-							<span>+</span><h4 class="countup">25</h4>
-							<h5>Water dam</h5>
-						</div>
-					</div>			
-		
-					<div class="col-md-3 col-sm-6 col-12">
-						<div class="countup-block">
-							<!-- <i class="icon-target3"></i> -->
-							<!-- <i class="fa-solid fa-cloud-rain"></i> -->
-		
-							<span>+</span><h4 class="countup">120 </h4>
-							<h5>Rainfall station</h5>
-						</div>
-					</div>
-		
-					<div class="col-md-3 col-sm-6 col-12">
-						<div class="countup-block">
-							<!-- <i class="icon-trophy3"></i> -->
-							<!-- <i class="fa-solid fa-gauge"></i> -->
-							<span>+</span><h4 class="countup">50 </h4>
-							<h5>Gauged station</h5>
-						</div>
-					</div>							
-				</div>
-			</div>
-		</div>
-		
-		<div class="row pt-10">
-			<div class="col-md-5 col-sm-12 col-12 wow fadeIn animated" data-wow-delay=".1s" data-wow-duration="1.5s">
-				<img loading="lazy" src="img/content/home/mission.webp" class="rounded-border shadow-primary full-width" alt="img">
-			<!-- Process Steps Start -->
-					<!-- Process Steps Start -->
-					
-					<div class="mt-40 wow fadeIn animated" data-wow-delay=".25s">
-						<div class="process-steps-xs">
-							<ul class="left-holder row">
-								<li class="col-md-3 col-sm-6 col-6">
-									<div class="process-step-xs center-holder">
-										<div class="process-step-icon">
-											<i class="fa-solid fa-lightbulb"></i>
-										</div>
-										<h3>Idea</h3>
-									</div>									
-								</li>
-								<li class="col-md-3 col-sm-6 col-6">
-									<div class="process-step-xs center-holder">
-										<div class="process-step-icon">
-											<i class="fa-solid fa-bullseye"></i>										
-										</div>
-										<h3>Strategy</h3>
-									</div>									
-								</li>
-								<li class="col-md-3 col-sm-6 col-6">
-									<div class="process-step-xs center-holder">
-										<div class="process-step-icon">
-											<i class="fa-solid fa-list-check"></i>										
-										</div>
-										<h3>Development</h3>
-									</div>									
-								</li>
-								<li class="col-md-3 col-sm-6 col-6">
-									<div class="process-step-xs center-holder">
-										<div class="process-step-icon">
-											<i class="fa-solid fa-circle-check"></i>
-										</div>
-										<h3>deployment</h3>
-									</div>									
-								</li>			
-							</ul>
-						</div>
-					</div>
-					<!-- Process Steps End -->		
-					<!-- Process Steps End -->
-					<div class="text-content-big mt-10 wow fadeIn animated" data-wow-delay=".15s">
-						<p style="text-align: justify;">The outcomes of this project will be deployed in real and operational applications. They will also constitute valuable information for the national strategy and plan for water resource management and climate change adaptation.</p>
-					</div>	
-			</div>				
-			<div class="col-md-7 col-sm-12 col-12">
-				<div class="pl-45-md">
-					<div class="section-heading left-holder wow fadeIn animated" data-wow-delay=".1s">
-						<h3 class="bold"> <span class="italic libre-baskerville primary-color">MorSnow</span>'s vision</h3>
-						<div class="section-heading-line"></div>
-					</div>
-					<div class="text-content-big mt-10 wow fadeIn animated" data-wow-delay=".15s">
-						<p style="text-align: justify;">The MorSnow Project will directly compensate for the gap in ground data. MorSnow will develop decision support tools for improving water resources management, from experimental to larger basins, by integrating satellites images into hydrological models to quantify and forecast water balance components in the upstream parts of reservoirs and basins in Morocco. The research in MorSnow focuses on</p>
-					</div>
-
-					<!-- List Start -->
-					<div class="mt-25 wow fadeIn animated" data-wow-delay=".2s">
-						<ul class="primary-list">
-							<li><i class="fa fa-check-square"></i>Measuring the meteorological and snowpack parameters and analyzing their spatial and temporal dynamics by using both automatic records and field surveys.</li>
-							<li><i class="fa fa-check-square"></i>Measuring snow sublimation through the installation of an Eddy covariance device on snow
-								Satellite-based monitoring of snow to assess the effect of different physical and climatic factors on snow cover area distribution</li>
-							<li><i class="fa fa-check-square"></i>Modeling snow accumulation</li>
-							<li><i class="fa fa-check-square"></i>Using UAV-TIR Camera to constrain snowmelt models at the local and small basin scale</li>
-							<li><i class="fa fa-check-square"></i>Isotopic sampling to assess the recharge processes from snow and rain</li>
-							<li><i class="fa fa-check-square"></i>Test the usefulness of the GRACE satellite to monitor groundwater recharge</li>
-							<li><i class="fa fa-check-square"></i>Runoff and hydrological modeling to estimate the water balance within the basin</li>
-							<li><i class="fa fa-check-square"></i>Assessing the impact of the possible future changes in climatic conditions on water resources (both in terms of surface water and groundwater)</li>
-
-						</ul>
-					</div>
-					<!-- List End -->		
-				</div>
-			</div>		
-		</div>
-	</div>
-</div>
-<!-- about Section END -->
-
-<!-- team START -->
-
-<div class="section" id="team">
-	<div class="container">
-		<div class="section-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
-			<h2 class="bold"><span class="italic libre-baskerville primary-color">MorSnow </span> team</h2>
-			
-			<p>A transversal team of researchers and engineers has been formed for Morsnow project. The researchers provide subject matter knowledge and data analysis skills, while the engineers contribute technical proficiency and practical solutions. Through open communication and multidisciplinary collaboration, the team bridges the gap between theory and application to achieve project goals.</p>
-		</div>		
-			
-		<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="4"  data-md-items="3" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/chehbouni.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Abdelghani Chehbouni</h4>
-					<h6 class="italic libre-baskerville">CRSA program lead</h6>
-				</div>
-			</div>
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/boudhar.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Abdelghani Boudhar</h4>
-					<h6 class="italic libre-baskerville">Project investigator</h6>
-				</div>
-			</div>
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/ouatiki.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Hamza Ouatiki</h4>
-					<h6 class="italic libre-baskerville">Co-Project investigator</h6>
-				</div>
-			</div>
-
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/Touria Benmira.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Touria Benmira</h4>
-					<h6 class="italic libre-baskerville">Senior data scientist</h6>
-				</div>
-			</div>
-
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/Ismail Karaoui.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Ismail Karaoui</h4>
-					<h6 class="italic libre-baskerville">Senior research engineer</h6>
-				</div>
-			</div>
-
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/Abderrahim Laalyej.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Abderrahim Laalyej</h4>
-					<h6 class="italic libre-baskerville">Instrumentation technician</h6>
-				</div>
-			</div>
-
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/Ayoub Bouihrouchane.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Ayoub Bouihrouchane</h4>
-					<h6 class="italic libre-baskerville">Software engineer</h6>
-				</div>
-			</div>
-
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/Bouchra Bargam.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Bouchra Bargam</h4>
-					<h6 class="italic libre-baskerville">PhD candidate</h6>
-				</div>
-			</div>
-
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/Nadia Rhoujatti.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Nadia Rhoujatti</h4>
-					<h6 class="italic libre-baskerville">PhD candidate</h6>
-				</div>
-			</div>
-
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/Haytam El Yousfi.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Haytam Elyoussfi</h4>
-					<h6 class="italic libre-baskerville">PhD candidate</h6>
-				</div>
-			</div>
-
-			<div class="item team-block-img">
-				<img loading="lazy" src="img/content/team/Mustapha Bousbaa.webp" alt="img">
-				<div class="team-block-text">
-					<h4>Mostafa Bousbaa</h4>
-					<h6 class="italic libre-baskerville">PhD candidate</h6>
-				</div>
-			</div>								
-		</div>							
-	</div>
-	<div class="container">
-		<div class="section-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
-			<h2 class="bold">Internships</h2>
-			<div class="section-heading-line"></div>
-			<p class="center-holder wow fadeIn animated">This research project involves a transversal team consisting of researchers, engineers, and interns. The team collaborates to address challenges by combining theoretical expertise with practical implementation. The interns, students in their final year, contribute fresh perspectives and assist in various project tasks, fostering a collaborative learning environment.</p>	
-		</div>
-		
-		<div class="row mt-30">
-			<div class="col-sm-6">
-				<h5 class="mb-20"> March - July, 2021</h5>
-				<ul class="primary-list">
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Multi-Source Space-Time Fusion Satellite Images for Snow Mapping in Moroccan Atlas 
-						<a class="primary-button button-xs" href="reports/2021_PFE_bousbaa.pdf"> View Report</a>
-						<h6>Mostafa Bousbaa</h6>
-					</li>
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Tracking And Mapping Seasonal Snow Cover Parameters In Moroccan Atlas Under Google Earth Engine 
-						<a class="primary-button button-xs" href="reports/2021_PFE_eljabiri.pdf">View Report</a>
-						<h6>Youssra Eljabiri</h6>
-					</li>
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Development of a Geoportal for Multi-Source Spatial Data Management
-						<a class="primary-button button-xs" href="reports/2021_PFE_khalil.pdf">View Report</a> 
-						<h6>Zakaria Khalil</h6>
-					</li>
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Development of a web platform for pre-treatment and integration of hydrological models
-						<a class="primary-button button-xs" href="reports/2021_PFE_elyoussfi.pdf">View Report</a>
-						<h6>Haytam Elyoussfi</h6>
-					</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<h5 class="mb-20"> Febraury - August, 2022</h5>
-				<ul class="primary-list">
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Conception of a Geospatial database 
-						<a class="primary-button button-xs" href="reports/2022_PFE_rahouni.pdf">View Report</a>
-						<h6>Zahra Rahouni</h6>
-					</li>
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Developement of a water ressources management platform
-						<a class="primary-button button-xs" href="#">View Report</a> 
-						<h6>Ayoub Bouihrouchane</h6>
-					</li>
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Developement of an image processing mobile application
-						<a class="primary-button button-xs" href="#">View Report</a>  
-						<h6>Youssef moutaouakkil </h6>
-					</li>
-					<!-- <li class="interns"><i class="fa fa-check-square"></i>
-						<a class="primary-button button-xs" href="reports/2022_PFE_rahouni.pdf">View Report</a>
-						Development of a visualisation platform <h6>Souhaib berchil</h6>
-					</li> -->
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Amelioration of an existing geoportal
-						<a class="primary-button button-xs" href="reports/2022_PFE_sabri.pdf">View Report</a>
-						<h6>Anas Sabri</h6>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="row mt-40">
-			<div class="col-sm-6">
-				<h5 class="mb-20"> July - September, 2022</h5>
-				<ul class="primary-list">
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Deep Learning for Remote Sensing Data Fusion
-						<a class="primary-button button-xs" href="reports/2022_PFA_bouzzite.pdf">View Report</a>
-						<h6>Khadija Bouzzite</h6>
-					</li>
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Geospatial BIG DATA for hydrological decision support
-						<a class="primary-button button-xs" href="reports/2022_PFA_oumellaik.pdf">View Report</a>
-						<h6>Fatima Zahra oumellaik</h6>
-					</li>
-					<li class="interns"><i class="fa fa-check-square"></i>
-						Groundwater prediction using machine learning Tools Case study Oum Er Rbia <a class="primary-button button-xs" href="#">View Report</a><h6>Ayoub Oihi</h6></li>
-					<li class="interns"><i class="fa fa-check-square"></i>Snowmelt runoff simulation using SRM model Case study Oum Er Rbia <a class="primary-button button-xs" href="#">View Report</a><h6>Zineb Aiach</h6></li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<h5 class="mb-20"> Febraury - August, 2023</h5>
-				<ul class="primary-list">
-					<li class="interns"><i class="fa fa-check-square"></i>Deep learning-based Spatio-temporal Data Fusion for Water Resources Applications <a class="primary-button button-xs" href="reports/2023_PFE_elbouanani.pdf">View Report</a><h6>Nadir Elbouanani</h6></li>
-					<li class="interns"><i class="fa fa-check-square"></i>Groundwater prediction using machine learning Tools Case study Oum Er Rbia <a class="primary-button button-xs" href="reports/2023_PFE_oihi.pdf">View Report</a><h6>Ayoub Oihi</h6></li>
-					<li class="interns"><i class="fa fa-check-square"></i>Snowmelt runoff simulation using SRM model Case study Oum Er Rbia <a class="primary-button button-xs" href="reports/2023_PFE_aiach.pdf">View Report</a><h6>Zineb Aiach</h6></li>
-					<li class="interns"><i class="fa fa-check-square"></i>Geospatial Big Data <a class="primary-button button-xs" href="reports/2023_PFE_aitabbou.pdf">View Report</a><h6>Samir Ait abbou</h6></li>
-				</ul>
-				
-			</div>
-		</div>
-		<div class="row mt-40">
-			<div class="col-sm-6">
-				<h5 class="mb-20"> August - September, 2023</h5>
-				<ul class="primary-list">
-					<li class="interns"><i class="fa fa-check-square"></i>GeoSpatial database management <a class="primary-button button-xs" href="reports/2023_PFA_oussaoui.pdf">View Report</a><h6>Sabir Oussaoui</h6></li>
-					<li class="interns"><i class="fa fa-check-square"></i>Development of a geoportal <a class="primary-button button-xs" href="reports/2023_PFA_babioui.pdf">View Report</a><h6>Abdelaaziz Babioui</h6></li>
-
-				</ul>
-			</div>
-		</div>	
-	</div>
-</div>
-
-<!-- team END -->
-
-
-<!-- Experimental works Section START -->
-<div class="section mt-100" id="experimental">
-	<div class="container">
-		<div class="section-heading center-holder wow fadeIn  animated mb-5" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
-			<h2 class="bold">Experimental works</h2>
-			<div class="section-heading-line"></div>
-		</div>
-		<div class="row mb-60">
-			
-			<div class="col-sm-6">
-				<img src="img/content/home/map_2.webp" class="experimental-works-sites" loading="lazy" alt="potential sites">
-			</div>
-			<div class="col-sm-6" style="align-self: center;">
-				The Morsnow project as a research program focused on data collection through experimental campaigns, particularly in snow and meteorological conditions. It strengthens its impact by strategically installing new measuring stations, expanding its reach and enhancing the precision of collected data. This initiative plays a crucial role in advancing scientific understanding of environmental dynamics.
-			</div>
-		</div>
-		<div class="row mb-60">
-			<div class="col-sm-6" style="align-self: center;">
-				Under the MorSnow-2 Project, UM6P and ABHOER collaborated to identify suitable sites for climate measurement stations and snow probes in the Oum Er-Rbia basin. Using a meticulous multi-criteria analysis, factors like accessibility, topography, snow cover patterns, and annual snowy days were considered. Satellite imagery from 2000 to 2023 and land use maps informed the decision-making process. Four potential regions—Jbel Rat, Azourki, Oumaskar, and Hayane—near the basin's prominent mountain range summit were identified. On-site surveys by Morsnow team validated these findings, ensuring the selected locations are ideal for equipment installation.
-				<br>
-				Four potential sites exploration campaigns were held on:
-				<div class="row">
-					<div class="col-md-6">
-						<ul class="primary-list">
-							<li><i class="fa fa-check-square"></i>June 14, 2023</li>
-							<li><i class="fa fa-check-square"></i>July 27, 2023</li>
-						</ul>
-						
-					</div>
-					<div class="col-md-6">
-						<ul class="primary-list">
-					
-							<li><i class="fa fa-check-square"></i>July 13, 2023</li>
-							
-							<li><i class="fa fa-check-square"></i>August 09-10, 2023</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6" style="align-self:center">
-				<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="1"  data-md-items="1" data-sm-items="1" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="true" data-nav-arrows="false">
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/10.webp" alt="img">
-					</div>
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/11.webp" alt="img">
-					</div>
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/13.webp" alt="img">
-					</div>
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/14.webp" alt="img">
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		
-		<div class="row mb-60">
-			
-			<div class="col-sm-6" style="align-self:center">
-				<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="1"  data-md-items="1" data-sm-items="1" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="true" data-nav-arrows="false">
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/2.webp" alt="img">
-					</div>
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/3.webp" alt="img">
-					</div>
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/4.webp" alt="img">
-					</div>
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/5.webp" alt="img">
-					</div>
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/6.webp" alt="img">
-					</div>
-					<div class="item experimental-works-img">
-						<img loading="lazy" src="img/content/experimental works/7.webp" alt="img">
-					</div>
-
-				</div>	
-			</div>
-			<div class="col-sm-6">
-				At an elevation of 3200 meters, on the eastern edge of the Rehraya basin, an automatic weather station is installed at Oukaimden by LMI-TREMA.
-				<br>
-				At half-hourly intervals, data on the following variables were collected: snow depth, temperature, global incident radiation, air humidity, wind speed, and precipitation (Geonor).
-				<br>
-				A team of researchers conducted a data collection campaign in Oukaimden, focusing on measuring snow height, density, and related variables. They gathered measurements of snow height, density, and related variables. Using specialized tools, the team collected data at multiple locations to assess the characteristics of the snowpack.
-				<br>
-				The experimental works aimed to contribute to ongoing studies and inform snow-related activities in the region.
-				<br>
-				Four data collection campaigns were held on:
-				<div class="row">
-					<div class="col-md-6">
-						<ul class="primary-list">
-							<li><i class="fa fa-check-square"></i>December 08, 2021</li>
-							<li><i class="fa fa-check-square"></i>April 01, 2022</li>
-						</ul>
-						
-					</div>
-					<div class="col-md-6">
-						<ul class="primary-list">
-					
-							<li><i class="fa fa-check-square"></i>December 28, 2021</li>
-							
-							<li><i class="fa fa-check-square"></i>February 06, 2023</li>
-						</ul>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Experimental works Section END -->
-
-
-<div class="section mt-100" id="events">
-	<div class="container">
-		<div class="section-heading center-holder wow fadeIn  animated mb-5" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
-			<h2 class="bold">Events & Seminars</h2>
-			<div class="section-heading-line"></div>
-		</div>
-		<div class="row mb-40">
-			<div class="col-sm-6" style="padding-top: 30px;">
-				
-					The CRSA center organized a seminar on the theme "Water Resources in Moroccan Mountains: Observations and Modeling", which took place on June 9, 2022 at UM6P - Mohammed VI Polytechnic University.
-					<br>
-					<br>
-					This seminar was an important meeting to exchange on the actions carried out in the framework of the research program within UM6P-CRSA (Morsnow Project) and also an opportunity to build a shared vision between the partners of this project and the actors of the "Water and Climate" theme in Morocco.
-					<div class="mt-15 wow fadeIn animated" data-wow-delay=".2s">
-						<a href="https://www.linkedin.com/posts/crsa-um6p_um6p-crsa-morsnow-activity-6942807882073563137-LZOo" class="primary-button button-sm" alt="Learn More">Learn More</a>
-					</div>
-			</div>
-			<div class="col-sm-6">
-				<img src="img/content/home/slide1.webp" loading="lazy" style="width: 100%;height: 300px; border-radius: 20px " alt="MorSnow-1 Seminar">
-			</div>
-		</div>
-		<div class="row mb-40">
-			<div class="col-sm-6">
-				<img src="img/content/home/kinnard.webp" loading="lazy" style="width: 100%;height: 300px; border-radius: 20px " alt="Kinnard Seminar">
-			</div>
-			<div class="col-sm-6" style="align-self: center;">
-				As part of the MorSnow project, our collaborator Professor Christophe Kinnard of UQTR University came on a mission in the week from 14 to 18 November 2022 to the CRSA centre at UM6P.
-				<br><br>
-				In that visit, Mr. Christophe KINNARD presented a seminar at the CRSA center and the IWRI about the research themes of the Glacio-lab at the University of UQTR, titled "Impact of the nival cover on summer melting rates in North America."
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<!-- Publications section START -->
-<div class="section mt-100" id="publications">
-	<div class="container">
-		<div class="section-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
-			<h3 class="bold">Publications</h3>
-			<div class="section-heading-line"></div>
-		</div>
-		<div class="medium-icon-tabs-light">
-			<div class='tabs tabs_animate mt-10'>
-				<ul class="tab-menu center-holder row">
-					<li class="tab tab-active"><a href="#Papers">Papers</a></li>
-					<li class="tab"><a href="#Chapters">Chapters</a></li>
-					<li class="tab"><a href="#Communications">Communications</a></li>
-				</ul>
-			</div>
-			<div id='Papers' class="clearfix tab-body">
-				<div class="row mt-40">
-					<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="3"  data-md-items="2" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/1.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>Deep Learning Approach with LSTM for Daily Streamflow Prediction in a Semi-Arid Area: A Case Study of Oum Er-Rbia River Basin, Morocco</h4>
-									<p>January, 2023</p>	
-									<div class="service-block-button">
-										<a href="https://www.researchgate.net/publication/366969980_Deep_Learning_Approach_with_LSTM_for_Daily_Streamflow_Prediction_in_a_Semi-Arid_Area_A_Case_Study_of_Oum_Er-Rbia_River_Basin_Morocco" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>	
-						
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/2.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>High-Resolution Monitoring of the Snow Cover on the Moroccan Atlas through the Spatio-Temporal Fusion of Landsat and Sentinel-2 Images</h4>
-									<p>November, 2022</p>	
-									<div class="service-block-button">
-										<a href="https://www.researchgate.net/publication/365499714_High-Resolution_Monitoring_of_the_Snow_Cover_on_the_Moroccan_Atlas_through_the_Spatio-Temporal_Fusion_of_Landsat_and_Sentinel-2_Images" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-						
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/6.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>When climate variability partly compensates for groundwater depletion: An analysis of the GRACE signal in Morocco</h4>
-									<p>July, 2022</p>	
-									<div class="service-block-button">
-										<a href="https://www.researchgate.net/publication/362093116_When_climate_variability_partly_compensates_for_groundwater_depletion_An_analysis_of_the_GRACE_signal_in_Morocco" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/8.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>Precipitation isotopes to elucidate moisture sources in the Western Mediterranean: case of the Middle Atlas Mountains, Morocco</h4>
-									<p>May, 2023</p>	
-									<div class="service-block-button">
-										<a href="https://link.springer.com/article/10.1007/s12665-023-10930-2" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/9.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>Isotopic tracers to assess the snowmelt contribution to the groundwater recharge: a case from the Moroccan High and Middle Atlas Mountains</h4>
-									<p>November, 2021</p>	
-									<div class="service-block-button">
-										<a href="https://link.springer.com/article/10.1007/s12517-021-08737-1" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/11.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>Snow Lapse Rate Changes in the Atlas Mountain in Morocco Based on MODIS Time Series during the Period 2000–2016</h4>
-									<p>August, 2021</p>	
-									<div class="service-block-button">
-										<a href="https://www.mdpi.com/2072-4292/13/17/3370" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/12.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>MODIS Does Not Capture the Spatial Heterogeneity of Snow Cover Induced by Solar Radiation</h4>
-									<p>April, 2021</p>	
-									<div class="service-block-button">
-										<a href="https://www.frontiersin.org/articles/10.3389/feart.2021.640250/full" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/13.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>Snow hydrology in the Moroccan Atlas Mountains</h4>
-									<p>August, 2021</p>	
-									<div class="service-block-button">
-										<a href="https://www.sciencedirect.com/science/article/pii/S2214581822001148" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/14.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>Assessment of MERRA-2 and ERA5 to Model the Snow Water Equivalent in the High Atlas (1981–2019)</h4>
-									<p>March, 2021</p>	
-									<div class="service-block-button">
-										<a href="https://www.mdpi.com/2073-4441/13/7/890" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/10.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Paper</h6>
-									<h4>Sensitivity and Interdependency Analysis of the HBV Conceptual Model Parameters in a Semi-Arid Mountainous Watershed</h4>
-									<p>August, 2020</p>	
-									<div class="service-block-button">
-										<a href="https://www.mdpi.com/2073-4441/12/9/2440" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-			
-						
-					</div>	
-				</div>
-			</div>
-			
-			<div id='Chapters' class="clearfix tab-body">
-				<div class="row mt-40">
-					<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="2"  data-md-items="2" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
-						
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/chapter-1.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Book chapter</h6>
-									<h4>Water Resources Monitoring Over The Atlas Mountains In Morocco Using Satellite Observations And Reanalysis Data</h4>
-									<p>August, 2022</p>	
-									<div class="service-block-button">
-										<a href="https://www.researchgate.net/publication/363102587_Water_Resources_Monitoring_Over_the_Atlas_Mountains_in_Morocco_Using_Satellite_Observations_and_Reanalysis_Data" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/15.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Book chapter</h6>
-									<h4>Hydrological Response to Snow Cover Changes Using Remote Sensing over the Oum Er Rbia Upstream Basin, Morocco</h4>
-									<p>August, 2019</p>	
-									<div class="service-block-button">
-										<a href="https://link.springer.com/chapter/10.1007/978-3-030-21166-0_9" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<div id='Communications' class="clearfix tab-body">
-				<div class="row mt-40">
-					<div class="owl-carousel owl-theme customizable-carousel" data-loop="true" data-items="3"  data-md-items="2" data-sm-items="2" data-xs-items="1" data-space="15" data-autoplay="true" data-autospeed="4000" data-nav-dots="false" data-nav-arrows="true">
-						
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/3.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Poster</h6>
-									<h4>LSTM-based Deep Learning Approach for Prediction Snow Depth in Morocco : Case Study Tichki – Draa Valley<br><br></h4>
-									<p>November, 2022</p>	
-									<div class="service-block-button">
-										<a href="https://www.researchgate.net/publication/365326777_LSTM-based_Deep_Learning_Approach_for_Prediction_Snow_Depth_in_Morocco_Case_Study_Tichki_-_Draa_Valley" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-						
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/5.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Poster</h6>
-									<h4>A method for robust estimation of snow seasonality metrics from Landsat
-										and Sentinel-2 time series data at national scales with Google Earth Engine</h4>
-									<p>November, 2022</p>	
-									<div class="service-block-button">
-										<a href="https://gesoc2022.sciencesconf.org/416350" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/4.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Presentation</h6>
-									<h4>A Spatio-Temporal Fusion Approach of Landsat and Sentinel-2 Images for Snow Cover Mapping in the Moroccan Atlas.</h4>
-									<p>November, 2022</p>	
-									<div class="service-block-button">
-										<a href="https://www.researchgate.net/publication/365607938_A_Spatio-Temporal_Fusion_Approach_of_Landsat_and_Sentinel-2_Images_for_Snow_Cover_Mapping_in_the_Moroccan_Atlas" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="service-block">
-								<img loading="lazy" src="img/content/papers/7.webp" alt="img">
-								<div class="service-block-inner">
-									<h6>Poster</h6>
-									<h4>Streamflow prediction using machine learning techniques: application case in the Moroccan Atlas sub-basin</h4>
-									<p>November, 2022</p>	
-									<div class="service-block-button">
-										<a href="https://gesoc2022.sciencesconf.org/428585/" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
-									</div>											
-								</div>
-							</div>
-						</div>
-
-						
-							
-					</div>	
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Publications section END -->
-
-<!-- Partners Carousel START -->
-<div class="section section-sm" id="partners">
-	<div class="container">
-		<div class="section-heading center-holder wow fadeIn animated" data-wow-delay=".1s">
-			<small></small>
-			<h3 class="bold">Our <span class="italic libre-baskerville primary-color">Partners</span></h3>
-			<div class="section-heading-line"></div>
-			<p></p>
-		</div>
-        <div class="owl-carousel owl-theme clients" id="clients">
-
-            <div class="item">
-            	<img loading="lazy" src="img/logos/iwri.webp" alt="IWRI">  
+    <!-- ======= About Section ======= -->
+    <div id="about">
+      <section class="about">
+        <div class="container">
+          <div class="section-title">
+            <h1 class="section-title">About <span class="morsnow">MorSnow</span></h1>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2 center-holder" data-aos="zoom-in" data-aos-delay="150">
+              <iframe src="leaflet.html" frameborder="0" style="height:400px; width:100%; border-radius: 10px;"></iframe>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+              <p class="">
+                The principal rivers in Morocco originate from the mountain ranges (Atlas and Rif). These regions play the role of a water tower for the downstream lands by providing a significant volume of the superficial water for aquifers alimentation and dam recharge. The agriculture sector is considered as the primary consumer of the supplied water. Due to the orographic effect, air temperature decreases significantly by altitude, and precipitation falls as liquid or solid forms. Consequently, head watersheds with elevations above 1400 meters are covered with snow and receive an enhanced precipitation rate in snowfall in the cold season. As measured on the southern (Mgoun) and the northern (Ourika) slopes of the High Atlas range, snowfall represents between 20% and 80% of total precipitation depending on the elevation and season.
+            Considering water scarcity and climate change constraints, proper water resources management is becoming a national priority. It is necessary to understand and quantify water fluxes redistribution at the catchment scale to design and implement accurate management plans for water resources. Despite the importance of the snow component, high watersheds are almost devoid of ground observations causing a gap in water budget calculations. Remote sensing technologies proved to provide reliable information to monitor snow cover areas (SCA).
+              </p>
+              <a href="https://crsa.um6p.ma/projects/Monitoring-and-Quantifying-Snowmelt-contribution-for-Moroccan-Water-Management-strategies-in-the-context-of-Climate-Change--1st-Phase-(MorSnow-1)/?id=6033bc14f098326b3be26473" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End About Section -->
+  
+      <!-- ======= Counts Section ======= -->
+      <section id="counts" class="counts">
+        <div class="container">
+  
+          <div class="row counters">
+  
+            <div class="col-lg-3 col-6 text-center">
+              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Basins</p>
+            </div>
+  
+            <div class="col-lg-3 col-6 text-center">
+              <span class="d-flex justify-content-center">+
+                <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter">25</span>
+              </span>
+              <p>Water Dams</p>
+            </div>
+  
+            <div class="col-lg-3 col-6 text-center">
+              <span class="d-flex justify-content-center">+
+                <span data-purecounter-start="0" data-purecounter-end="120" data-purecounter-duration="1" class="purecounter">+</span>
+              </span>
+              <p>Rainfall stations</p>
+            </div>
+  
+            <div class="col-lg-3 col-6 text-center">
+              <span class="d-flex justify-content-center">
+                +<span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter">+</span>
+              </span>
+              <p>Gauged stations</p>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Counts Section -->
+  
+      <!-- ======= Vision Section ======= -->
+      <section id="vision" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="row gy-4">
+           <div class="col-6 center-holder">
+            <div class="experimental-works-img">
+              <img loading="lazy" src="assets/img/content/home/mission.webp" class="rounded-border" alt="img">
             </div>
 
-            <div class="item">
-            	<img loading="lazy" src="img/logos/ocp.webp" alt="OCP">  
+          </div>
+           <div class="col-6">
+            <p>The MorSnow Project will directly compensate for the gap in ground data. MorSnow will develop decision support tools for improving water resources management, from experimental to larger basins, by integrating satellites images into hydrological models to quantify and forecast water balance components in the upstream parts of reservoirs and basins in Morocco. The research in MorSnow focuses on:
+              <ul class="vision-list">
+                <li><i class="bi bi-check-circle"></i> Measuring the meteorological and snowpack parameters and analyzing their spatial and temporal dynamics by using both automatic records and field surveys.</li>
+                <li><i class="bi bi-check-circle"></i> Measuring snow sublimation through the installation of an Eddy covariance device on snow Satellite-based monitoring of snow to assess the effect of different physical and climatic factors on snow cover area distribution</li>
+                <li><i class="bi bi-check-circle"></i> Modeling snow accumulation</li>
+                <li><i class="bi bi-check-circle"></i> Using UAV-TIR Camera to constrain snowmelt models at the local and small basin scale </li>
+                <li><i class="bi bi-check-circle"></i> Isotopic sampling to assess the recharge processes from snow and rain</li>
+                <li><i class="bi bi-check-circle"></i> Test the usefulness of the GRACE satellite to monitor groundwater recharge</li>
+                <li><i class="bi bi-check-circle"></i> Runoff and hydrological modeling to estimate the water balance within the basin</li>
+                <li><i class="bi bi-check-circle"></i> Assessing the impact of the possible future changes in climatic conditions on water resources (both in terms of surface water and groundwater)</li>
+              </ul>
+            </p>
+           </div>
+          </div>
+        </div>
+      </section><!-- End Vision Section -->
+    </div>
+
+    
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>A transversal team of researchers and engineers has been formed for Morsnow project. The researchers provide subject matter knowledge and data analysis skills, while the engineers contribute technical proficiency and practical solutions. Through open communication and multidisciplinary collaboration, the team bridges the gap between theory and application to achieve project goals.</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/content/team/chehbouni.webp" class="testimonial-img" alt="">
+                <h3>Abdelghani Chehbouni</h3>
+                <h4>CRSA Program Lead</h4>
+                <span class="social-icons">
+                  <a href="https://www.researchgate.net/profile/A-Chehbouni"><i class="RS-icon"></i></a>
+                  <a href="https://www.linkedin.com/in/ghani-chehbouni-544b4462"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:abdelghani.chehbouni@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <a href="https://crsa.um6p.ma/people/Chehbouni-Abdelghani/?id=602f0590e2528435743e8ee5"><i class="crsa-icon"></i></a>
+                </span>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                
+                <img src="assets/img/content/team/boudhar.webp" class="testimonial-img" alt="">
+                <h3>Abdelghani Boudhar</h3>
+                <h4>Project Investigator</h4>
+                <span class="social-icons">
+                  <a href="https://www.researchgate.net/profile/Abdelghani-Boudhar"><i class="RS-icon"></i></a>
+                  <a href="https://www.linkedin.com/in/abdelghani-boudhar-3b43983b"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:abdelghani.boudhar@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <a href="https://crsa.um6p.ma/people/Boudhar-Abdelghani/?id=602f0621e2528435743e8eea"><i class="crsa-icon"></i></a>
+                </span>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                
+                <img src="assets/img/content/team/ouatiki.webp" class="testimonial-img" alt="">
+                <h3>Hamza Ouatiki</h3>
+                <h4>Co-Project Investigator</h4>
+                <span class="social-icons">
+                  <a href="https://www.researchgate.net/profile/Hamza-Ouatiki"><i class="RS-icon"></i></a>
+                  <a href="https://www.linkedin.com/in/hamza-ouatiki-5a790612a"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:hamza.ouatiki@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <!-- <a href=""><i class="crsa-icon"></i></a> -->
+                </span>
+              </div>
             </div>
 
-			<div class="item">
-            	<img loading="lazy" src="img/logos/abhoer.webp" alt="ABH oued oum-er rbia">  
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                
+                <img src="assets/img/content/team/Touria Benmira.webp" class="testimonial-img" alt="">
+                <h3>Touria Benmira</h3>
+                <h4>Senior Data Scientist</h4>
+                <span class="social-icons">
+                  <!-- <a href=""><i class="RS-icon"></i></a> -->
+                  <a href="https://www.linkedin.com/in/touria-benmira-83445b15a"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:touria.benmira@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <a href="https://crsa.um6p.ma/people/Benmira-Touria/?id=602f06f1e2528435743e8eee"><i class="crsa-icon"></i></a>
+                </span>
+              </div>
             </div>
 
-			<div class="item">
-            	<img loading="lazy" src="img/logos/anef.webp" alt="ANEF">  
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                
+                <img src="assets/img/content/team/Ismail Karaoui.webp" class="testimonial-img" alt="">
+                <h3>Ismail Karaoui</h3>
+                <h4>Senior Research Engineer</h4>
+                <span class="social-icons">
+                  <a href="https://www.researchgate.net/profile/Karaoui-Ismail"><i class="RS-icon"></i></a>
+                  <a href="https://www.linkedin.com/in/ismail-karaoui-a7924683"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:imsail.karaoui@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <!-- <a href=""><i class="crsa-icon"></i></a> -->
+                </span>
+              </div>
             </div>
 
-			<div class="item">
-            	<img loading="lazy" src="img/logos/hsm.webp" alt="HSM">  
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/content/team/Ayoub Bouihrouchane.webp" class="testimonial-img" alt="">
+                <h3>Ayoub Bouihrouchane</h3>
+                <h4>Software Developer</h4>
+                <span class="social-icons">
+                  <a href="https://www.linkedin.com/in/ayoub-bouihrouchane/"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:ayoub.bouihrouchane@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                </span>
+              </div>
             </div>
 
-			<div class="item">
-            	<img loading="lazy" src="img/logos/cesbio.webp" alt="cesbio">  
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                
+                <img src="assets/img/content/team/Abderrahim Laalyej.webp" class="testimonial-img" alt="">
+                <h3>Abderrahim Laalyej</h3>
+                <h4>Instrumentation Technician</h4>
+                <span class="social-icons">
+                  <!-- <a href=""><i class="RS-icon"></i></a> -->
+                  <a href="https://www.linkedin.com/in/abderrahim-laalyej-3a6967271"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:abderrahim.laalyej@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <!-- <a href=""><i class="crsa-icon"></i></a> -->
+                </span>
+              </div>
             </div>
 
-			<div class="item">
-            	<img loading="lazy" src="img/logos/cadi ayyad.webp" alt="cadi ayyad">  
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/content/team/Bouchra Bargam.webp" class="testimonial-img" alt="">
+                <h3>Bouchra Bargam</h3>
+                <h4>
+                  Phd Candidate
+                </h4>
+                <span class="social-icons">
+                  <a href="https://www.researchgate.net/profile/Bouchra-Bargam-2"><i class="RS-icon"></i></a>
+                  <a href="https://www.linkedin.com/in/bouchra-bargam-86454311a"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:bouchra.bargam@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <a href="https://crsa.um6p.ma/people/Bouchra-BARGAM/?id=602f08a5e2528435743e8ef7"><i class="crsa-icon"></i></a>
+                </span>
+              </div>
             </div>
 
-			<div class="item">
-            	<img loading="lazy" src="img/logos/uiz.webp" alt="uiz">  
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/content/team/Nadia Rhoujatti.webp" class="testimonial-img" alt="">
+                <h3>Nadia Rhoujatti</h3>
+                <h4>
+                  Phd Candidate
+                </h4>
+                <span class="social-icons">
+                  <a href="https://www.researchgate.net/profile/Nadia-Rhoujjati"><i class="RS-icon"></i></a>
+                  <a href="https://www.linkedin.com/in/nadia-rhoujjati-1a6823224"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:nadia.rhoujatti@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <a href="https://crsa.um6p.ma/people/RHOUJJATI-Nadia/?id=602f08e0e2528435743e8ef8"><i class="crsa-icon"></i></a>
+                </span>
+              </div>
             </div>
 
-			<div class="item">
-            	<img loading="lazy" src="img/logos/usms.webp" alt="usms">  
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/content/team/Haytam El Yousfi.webp" class="testimonial-img" alt="">
+                <h3>Haytam El youssfi</h3>
+                <h4>
+                  Phd Candidate
+                </h4>
+                <span class="social-icons">
+                  <a href="https://www.researchgate.net/profile/Haytam-Elyoussfi"><i class="RS-icon"></i></a>
+                  <a href="https://www.linkedin.com/in/haytam-el-youssfi"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:haytam.elyoussfi@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <a href="https://crsa.um6p.ma/people/HAYTAM-ELYOUSSFI-/?id=624bf01fbebd012ab0efa416"><i class="crsa-icon"></i></a>
+                </span>
+              </div>
             </div>
 
-			<div class="item">
-            	<img loading="lazy" src="img/logos/abht.webp" alt="abh Tensift">  
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/content/team/Mustapha Bousbaa.webp" class="testimonial-img" alt="">
+                <h3>Mostafa Bousbaa</h3>
+                <h4>
+                  Phd Candidate
+                </h4>
+                <span class="social-icons">
+                  <a href="https://www.researchgate.net/profile/Mostafa-Bousbaa-2"><i class="RS-icon"></i></a>
+                  <a href="https://www.linkedin.com/in/mostafa-bousbaa"><i class="bx bxl-linkedin"></i></a>
+                  <a href="mailto:mostafa.bousbaa@um6p.ma"><i class="bx bx-mail-send"></i></a>
+                  <a href="https://crsa.um6p.ma/people/Mostafa-Bousbaa-/?id=624bf127bebd012ab0efa417"><i class="crsa-icon"></i></a>
+                </span>
+              </div>
             </div>
 
-			<div class="item">
-            	<img loading="lazy" src="img/logos/uqtr.webp" alt="uqtr">  
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="section-heading center-holder" data-wow-delay=".1s">
+          <p class="text-center">This research project involves a transversal team consisting of researchers, engineers, and interns. The team collaborates to address challenges by combining theoretical expertise with practical implementation. The interns, students in their final year, contribute fresh perspectives and assist in various project tasks, fostering a collaborative learning environment.</p>	
+        </div>
+        
+        <div class="row mt-30">
+          <div class="col-sm-6">
+            <h5 class="mb-20"> March - July, 2021 (PFE)</h5>
+            <ul class="primary-list">
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Multi-Source Space-Time Fusion Satellite Images for Snow Mapping in Moroccan Atlas 
+                <a class="primary-button button-xs" href="reports/2021_PFE_bousbaa.pdf"> View Report</a>
+                <h6>Mostafa Bousbaa</h6>
+              </li>
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Tracking And Mapping Seasonal Snow Cover Parameters In Moroccan Atlas Under Google Earth Engine 
+                <a class="primary-button button-xs" href="reports/2021_PFE_eljabiri.pdf">View Report</a>
+                <h6>Youssra Eljabiri</h6>
+              </li>
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Development of a Geoportal for Multi-Source Spatial Data Management
+                <a class="primary-button button-xs" href="reports/2021_PFE_khalil.pdf">View Report</a> 
+                <h6>Zakaria Khalil</h6>
+              </li>
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Development of a web platform for pre-treatment and integration of hydrological models
+                <a class="primary-button button-xs" href="reports/2021_PFE_elyoussfi.pdf">View Report</a>
+                <h6>Haytam Elyoussfi</h6>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <h5 class="mb-20"> Febraury - August, 2022 (PFE) </h5>
+            <ul class="primary-list">
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Conception of a Geospatial database 
+                <a class="primary-button button-xs" href="reports/2022_PFE_rahouni.pdf">View Report</a>
+                <h6>Zahra Rahouni</h6>
+              </li>
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Developement of a water ressources management platform
+                <a class="primary-button button-xs" href="#">View Report</a> 
+                <h6>Ayoub Bouihrouchane</h6>
+              </li>
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Developement of an image processing mobile application
+                <a class="primary-button button-xs" href="#">View Report</a>  
+                <h6>Youssef moutaouakkil </h6>
+              </li>
+              <!-- <li class="interns"><i class="fa fa-check-square"></i>
+                <a class="primary-button button-xs" href="reports/2022_PFE_rahouni.pdf">View Report</a>
+                Development of a visualisation platform <h6>Souhaib berchil</h6>
+              </li> -->
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Amelioration of an existing geoportal
+                <a class="primary-button button-xs" href="reports/2022_PFE_sabri.pdf">View Report</a>
+                <h6>Anas Sabri</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mt-40">
+          <div class="col-sm-6">
+            <h5 class="mb-20"> July - September, 2022 (Summer internships)</h5>
+            <ul class="primary-list">
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Deep Learning for Remote Sensing Data Fusion
+                <a class="primary-button button-xs" href="reports/2022_PFA_bouzzite.pdf">View Report</a>
+                <h6>Khadija Bouzzite</h6>
+              </li>
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Geospatial BIG DATA for hydrological decision support
+                <a class="primary-button button-xs" href="reports/2022_PFA_oumellaik.pdf">View Report</a>
+                <h6>Fatima Zahra oumellaik</h6>
+              </li>
+              <li class="interns"><i class="fa fa-check-square"></i>
+                Groundwater prediction using machine learning Tools Case study Oum Er Rbia <a class="primary-button button-xs" href="#">View Report</a><h6>Ayoub Oihi</h6></li>
+              <li class="interns"><i class="fa fa-check-square"></i>Snowmelt runoff simulation using SRM model Case study Oum Er Rbia <a class="primary-button button-xs" href="#">View Report</a><h6>Zineb Aiach</h6></li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <h5 class="mb-20"> Febraury - August, 2023 (PFE)</h5>
+            <ul class="primary-list">
+              <li class="interns"><i class="fa fa-check-square"></i>Deep learning-based Spatio-temporal Data Fusion for Water Resources Applications <a class="primary-button button-xs" href="reports/2023_PFE_elbouanani.pdf">View Report</a><h6>Nadir Elbouanani</h6></li>
+              <li class="interns"><i class="fa fa-check-square"></i>Groundwater prediction using machine learning Tools Case study Oum Er Rbia <a class="primary-button button-xs" href="reports/2023_PFE_oihi.pdf">View Report</a><h6>Ayoub Oihi</h6></li>
+              <li class="interns"><i class="fa fa-check-square"></i>Snowmelt runoff simulation using SRM model Case study Oum Er Rbia <a class="primary-button button-xs" href="reports/2023_PFE_aiach.pdf">View Report</a><h6>Zineb Aiach</h6></li>
+              <li class="interns"><i class="fa fa-check-square"></i>Geospatial Big Data <a class="primary-button button-xs" href="reports/2023_PFE_aitabbou.pdf">View Report</a><h6>Samir Ait abbou</h6></li>
+            </ul>
+            
+          </div>
+        </div>
+
+        <div class="row mt-40">
+          <div class="col-sm-6">
+            <h5 class="mb-20"> August - September, 2023 (Summer internships)</h5>
+            <ul class="primary-list">
+              <li class="interns"><i class="fa fa-check-square"></i>GeoSpatial database management <a class="primary-button button-xs" href="reports/2023_PFA_oussaoui.pdf">View Report</a><h6>Sabir Oussaoui</h6></li>
+              <li class="interns"><i class="fa fa-check-square"></i>Development of a geoportal <a class="primary-button button-xs" href="reports/2023_PFA_babioui.pdf">View Report</a><h6>Abdelaaziz Babioui</h6></li>
+    
+            </ul>
+          </div>
+        </div>	
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <section id="experimental">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Experimental Works</h2>
+          <!-- <p>A transversal team of researchers and engineers has been formed for Morsnow project. The researchers provide subject matter knowledge and data analysis skills, while the engineers contribute technical proficiency and practical solutions. Through open communication and multidisciplinary collaboration, the team bridges the gap between theory and application to achieve project goals.</p> -->
+        </div>
+        <div class="row gy-4">
+          <div class="col-sm-6">
+            <div class="experimental-works-img">
+              
+              <figure>
+                <div id="sites_map" class="rounded-border">
+                  <div style="position: absolute;bottom: 10px;right: 10px;z-index: 500;background-color: white;padding: 7px;border: 1px solid gray;">
+                      <h6>Legend</h6>
+                      <p style="margin:0"><i class="sites"></i> Proposed sites</p>
+                  </div>
+                </div>
+                <figcaption>snow cover dynamics over the Moroccan Atlas from space (MODIS images)</figcaption>
+              </figure>
+              <!-- <img src="assets/img/content/home/map_2.webp" class="experimental-works-sites" loading="lazy" alt="potential sites"> -->
             </div>
+          </div>
+          <div class="col-sm-6" style="align-self: center;">
+            The Morsnow project as a research program focused on data collection through experimental campaigns, particularly in snow and meteorological conditions. It strengthens its impact by strategically installing new measuring stations, expanding its reach and enhancing the precision of collected data. This initiative plays a crucial role in advancing scientific understanding of environmental dynamics.
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-sm-6" style="align-self: center;">
+            Under the MorSnow-2 Project, UM6P and ABHOER collaborated to identify suitable sites for climate measurement stations and snow probes in the Oum Er-Rbia basin. Using a meticulous multi-criteria analysis, factors like accessibility, topography, snow cover patterns, and annual snowy days were considered. Satellite imagery from 2000 to 2023 and land use maps informed the decision-making process. Four potential regions—Jbel Rat, Azourki, Oumaskar, and Hayane—near the basin's prominent mountain range summit were identified. On-site surveys by Morsnow team validated these findings, ensuring the selected locations are ideal for equipment installation.
+            <br>
+            Four potential sites exploration campaigns were held on:
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="primary-list">
+                  <li><i class="bi bi-check-circle"></i> June 14, 2023</li>
+                  <li><i class="bi bi-check-circle"></i> July 27, 2023</li>
+                </ul>
+                
+              </div>
+              <div class="col-md-6">
+                <ul class="primary-list">
+              
+                  <li><i class="bi bi-check-circle"></i> July 13, 2023</li>
+                  
+                  <li><i class="bi bi-check-circle"></i> August 09-10, 2023</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6" style="align-self:center">
+            <div class="swiper-container experimental-sliders">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/10.webp" alt="Slide 1"></div>
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/11.webp" alt="Slide 2"></div>
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/13.webp" alt="Slide 3"></div>
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/14.webp" alt="Slide 3"></div>
+                  <!-- Add more slides as needed -->
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            
+          </div>
+        </div>
+        
+        
+        <div class="row gy-4">
+          
+          <div class="col-sm-6" style="align-self:center">
+            <div class="swiper-container experimental-sliders">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/2.webp" alt="Slide 1"></div>
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/3.webp" alt="Slide 2"></div>
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/4.webp" alt="Slide 3"></div>
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/5.webp" alt="Slide 3"></div>
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/6.webp" alt="Slide 3"></div>
+                  <div class="swiper-slide experimental-works-img"><img src="assets/img/content/experimental works/7.webp" alt="Slide 3"></div>
+                  <!-- Add more slides as needed -->
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            
+          </div>
+          <div class="col-sm-6">
+            At an elevation of 3200 meters, on the eastern edge of the Rehraya basin, an automatic weather station is installed at Oukaimden by LMI-TREMA.
+            <br>
+            At half-hourly intervals, data on the following variables were collected: snow depth, temperature, global incident radiation, air humidity, wind speed, and precipitation (Geonor).
+            <br>
+            A team of researchers conducted a data collection campaign in Oukaimden, focusing on measuring snow height, density, and related variables. They gathered measurements of snow height, density, and related variables. Using specialized tools, the team collected data at multiple locations to assess the characteristics of the snowpack.
+            <br>
+            The experimental works aimed to contribute to ongoing studies and inform snow-related activities in the region.
+            <br>
+            Four data collection campaigns were held on:
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="primary-list">
+                  <li><i class="bi bi-check-circle"></i> December 08, 2021</li>
+                  <li><i class="bi bi-check-circle"></i> April 01, 2022</li>
+                </ul>
+                
+              </div>
+              <div class="col-md-6">
+                <ul class="primary-list">
+              
+                  <li><i class="bi bi-check-circle"></i> December 28, 2021</li>
+                  
+                  <li><i class="bi bi-check-circle"></i> February 06, 2023</li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </section>
 
-			
 
-                     
-        </div> 		
-	</div>
-</div>
-<!-- Partners Carousel END -->
+    <section id="events">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Events & Seminars</h2>
+          <!-- <p>A transversal team of researchers and engineers has been formed for Morsnow project. The researchers provide subject matter knowledge and data analysis skills, while the engineers contribute technical proficiency and practical solutions. Through open communication and multidisciplinary collaboration, the team bridges the gap between theory and application to achieve project goals.</p> -->
+        </div>
+        <div class="row gy-4">
+          <div class="col-sm-6 center-holder">
+            <div>
+              <p>
+                The CRSA center organized a seminar on the theme "Water Resources in Moroccan Mountains: Observations and Modeling", which took place on June 9, 2022 at UM6P - Mohammed VI Polytechnic University.
+                <br>
+                <br>
+                This seminar was an important meeting to exchange on the actions carried out in the framework of the research program within UM6P-CRSA (Morsnow Project) and also an opportunity to build a shared vision between the partners of this project and the actors of the "Water and Climate" theme in Morocco.
+              </p>
+              <a href="https://www.linkedin.com/posts/crsa-um6p_um6p-crsa-morsnow-activity-6942807882073563137-LZOo" class="read-more" alt="Learn More">Read More</a>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="experimental-works-img">
+              <img src="assets/img/content/home/slide1.webp" class="rounded-border" loading="lazy" alt="MorSnow-1 Seminar">
+            </div>
+            
+          </div>
+        </div>
 
-<!-- Contact Form Section START -->
-<div id="contact" class="section section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6"  data-bgimage="img/content/home/footer-bg.webp">
-	<div class="container">
-		<div class="section-heading white-color left-holder wow fadeIn animated" data-wow-delay=".1s">
-			<h2 class="bold">Get answers</h2>
-			<div class="section-heading-line"></div>
-		</div>
-		<div class="row">
-				<div class="col-sm-4 mt-0">
-					<div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".2s" data-wow-duration="1.5s">
-						<i class="fa-solid fa-location-dot"></i>
-						<h4>Our Location</h4>
-						<h5>Lot 660, Hay Moulay Rachid </h5>
-						<h5>Ben Guerir 43150, Morocco</h5>
-					</div>
-				</div>
+        <div class="row gy-4">
+          <div class="col-sm-6">
+            <div class="experimental-works-img">
+              <img src="assets/img/content/home/kinnard.webp" loading="lazy" class="rounded-border" alt="Kinnard Seminar">
+            </div>
+          </div>
+          <div class="col-sm-6 center-holder">
+            <p>
+              As part of the MorSnow project, our collaborator Professor Christophe Kinnard of <a href="https://www.uqtr.ca" class="external-links">UQTR University</a> came on a mission in the week from 14 to 18 November 2022 to the CRSA centre at UM6P.
+				      <br><br>
+				    In that visit, Mr. Christophe KINNARD presented a seminar at the CRSA center and the IWRI about the research themes of the <a href="https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=5529" class="external-links">Glacio-lab</a> at the University of UQTR, titled "Impact of the nival cover on summer melting rates in North America."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= Publications Section ======= -->
+    <section id="publications" class="portfolio">
+      <div class="container" data-aos="fade-up">
 
-				<div class="col-sm-4">
-					<div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".3s" data-wow-duration="1.5s">
-						<i class="fa-solid fa-message"></i>
-						<h4>Our Email</h4>
-						<a href="malito:morsnow@um6p.ma"><h5>morsnow@um6p.ma</h5></a>
-						<a href="malito:crsa@um6p.ma"><h5>crsa@um6p.ma</h5></a>
-					</div>
-				</div>
-					
-				<div class="col-sm-4">
-					<div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".3s" data-wow-duration="1.5s">
-						<i class="fa-solid fa-contact-card"></i>
-						<h4>Our channels</h4>
-						<a href="https://crsa.um6p.ma/"><h5>CRSA website</h5></a>
-						<a href="https://www.linkedin.com/company/crsa-um6p/"><h5>CRSA @ LinkedIn</h5></a>
-					</div>
-				</div>	
-		</div>
-	</div>
-</div>
-<!-- Contact Form Section END -->
+        <div class="section-title">
+          <h2>Publications</h2>
+        </div>
 
-<!-- Footer START -->
-<footer class="footer-style-4">
-	<div class="container">
-		<!-- Bottom Bar Start -->
-		<div class="footer-4-bottom-bar">
-			<div class="row">
-				<div class="col-12  center-holder">
-					<p>Morsnow by CRSA - UM6P ©2023.</p>
-				</div>
-			</div>
-		</div>
-		<!-- Bottom Bar End -->		
-	</div>	
-</footer>
-<!-- Footer END -->
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <!-- <li data-filter="*" >All</li> -->
+              <li data-filter=".filter-paper" class="filter-active">Papers</li>
+              <li data-filter=".filter-chapter">Chapters</li>
+              <li data-filter=".filter-communication">Communications</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container d-flex justify-content-between">
+
+          <div class="col-lg-12 portfolio-item  filter-paper">
+            <div class="swiper-container publications-slider">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/16.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6> <p>August, 2023</p>
+                      </div>
+                      <h4>Accuracy assessment and bias correction of remote sensing–based rainfall products over semiarid watersheds</h4>
+                      <div class="service-block-button">
+                        <a href="https://link.springer.com/article/10.1007/s00704-023-04586-y" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>											
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/8.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6> <p>May, 2023</p>
+                      </div>
+                      <h4>Precipitation isotopes to elucidate moisture sources in the Western Mediterranean: case of the Middle Atlas Mountains, Morocco</h4>
+                      <div class="service-block-button">
+                        <a href="https://link.springer.com/article/10.1007/s12665-023-10930-2" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>											
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/1.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6><p>January, 2023</p>
+                      </div>
+                      <h4>Deep Learning Approach with LSTM for Daily Streamflow Prediction in a Semi-Arid Area: A Case Study of Oum Er-Rbia River Basin, Morocco</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.researchgate.net/publication/366969980_Deep_Learning_Approach_with_LSTM_for_Daily_Streamflow_Prediction_in_a_Semi-Arid_Area_A_Case_Study_of_Oum_Er-Rbia_River_Basin_Morocco" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>											
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/2.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6><p>November, 2022</p>
+                      </div>
+                      <h4>High-Resolution Monitoring of the Snow Cover on the Moroccan Atlas through the Spatio-Temporal Fusion of Landsat and Sentinel-2 Images</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.researchgate.net/publication/365499714_High-Resolution_Monitoring_of_the_Snow_Cover_on_the_Moroccan_Atlas_through_the_Spatio-Temporal_Fusion_of_Landsat_and_Sentinel-2_Images" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>											
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/6.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6><p>July, 2022</p>
+                      </div>
+                      <h4>When climate variability partly compensates for groundwater depletion: An analysis of the GRACE signal in Morocco</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.researchgate.net/publication/362093116_When_climate_variability_partly_compensates_for_groundwater_depletion_An_analysis_of_the_GRACE_signal_in_Morocco" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>											
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/9.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6><p>November, 2021</p>	
+                      </div>
+                      <h4>Isotopic tracers to assess the snowmelt contribution to the groundwater recharge: a case from the Moroccan High and Middle Atlas Mountains</h4>
+                      <div class="service-block-button">
+                        <a href="https://link.springer.com/article/10.1007/s12517-021-08737-1" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>											
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/11.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6><p>August, 2021</p>	
+                      </div>
+                      <h4>Snow Lapse Rate Changes in the Atlas Mountain in Morocco Based on MODIS Time Series during the Period 2000–2016</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.mdpi.com/2072-4292/13/17/3370" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>												
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/13.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6><p>August, 2021</p>	
+                      </div>
+                      <h4>Snow hydrology in the Moroccan Atlas Mountains</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2214581822001148" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>													
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/12.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6><p>April, 2021</p>	
+                      </div>
+                      <h4>MODIS Does Not Capture the Spatial Heterogeneity of Snow Cover Induced by Solar Radiation</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.frontiersin.org/articles/10.3389/feart.2021.640250/full" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>														
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/14.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6><p>March, 2021</p>	
+                      </div>
+                      <h4>Assessment of MERRA-2 and ERA5 to Model the Snow Water Equivalent in the High Atlas (1981–2019)</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.mdpi.com/2073-4441/13/7/890" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>													
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide publication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/10.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Paper</h6><p>August, 2020</p>	
+                      </div>
+                      <h4>Sensitivity and Interdependency Analysis of the HBV Conceptual Model Parameters in a Semi-Arid Mountainous Watershed</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.mdpi.com/2073-4441/13/7/890" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>													
+                    </div>
+                  </div>
+                </div>
+                  
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 portfolio-item d-none filter-chapter">
+            <div class="swiper-container chapters-slider">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide chapter">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/chapter-1.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Chapter</h6> <p>August, 2022</p>
+                      </div>
+                      <h4>Water Resources Monitoring Over The Atlas Mountains In Morocco Using Satellite Observations And Reanalysis Data</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.researchgate.net/publication/363102587_Water_Resources_Monitoring_Over_the_Atlas_Mountains_in_Morocco_Using_Satellite_Observations_and_Reanalysis_Data" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>												
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide chapter">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/15.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Chapter</h6> <p>January, 2020</p>
+                      </div>
+                      <h4>Hydrological Response to Snow Cover Changes Using Remote Sensing over the Oum Er Rbia Upstream Basin, Morocco</h4>
+                      <div class="service-block-button">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-030-21166-0_9" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>												
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 portfolio-item d-none filter-communication">
+            <div class="swiper-container communications-slider">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide communication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/3.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Poster</h6> <p>November, 2022</p>
+                      </div>
+                      <h4>LSTM-based Deep Learning Approach for Prediction Snow Depth in Morocco : Case Study Tichki – Draa Valley</h4>
+                      <div class="service-block-button">
+                        <a href="https://www.researchgate.net/publication/365326777_LSTM-based_Deep_Learning_Approach_for_Prediction_Snow_Depth_in_Morocco_Case_Study_Tichki_-_Draa_Valley" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>												
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide communication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/4.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Poster</h6> <p>November, 2022</p>
+                      </div>
+                      <h4>A method for robust estimation of snow seasonality metrics from Landsat and Sentinel-2 time series data at national scales with Google Earth Engine</h4>
+                      <div class="service-block-button">
+                        <a href="https://gesoc2022.sciencesconf.org/416350" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>													
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide communication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/7.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Presentation</h6> <p>November, 2022</p>
+                      </div>
+                      <h4>Streamflow prediction using machine learning techniques: application case in the Moroccan Atlas sub-basin</h4>
+                      <div class="service-block-button">
+                        <a href="https://gesoc2022.sciencesconf.org/428585/" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>												
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide communication">
+                  <div class="service-block">
+                    <img loading="lazy" src="assets/img/content/papers/5.webp" alt="img">
+                    <div class="service-block-inner">
+                      <div class="d-flex">
+                        <h6>Poster</h6> <p>November, 2022</p>
+                      </div>
+                      <h4>A method for robust estimation of snow seasonality metrics from Landsat and Sentinel-2 time series data at national scales with Google Earth Engine</h4>
+                      <div class="service-block-button">
+                        <a href="https://gesoc2022.sciencesconf.org/416350" alt="Learn More">Learn More <i class="fa fa-chevron-right"></i></a>
+                      </div>											
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Publications Section -->
+
+    <section id="partners">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our Partners</h2>
+        </div>
+
+        <div class="row">
+          <div class="swiper-container partners-slider">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide partners">
+                  <a href="https://um6p.ma/fr/institut-international-de-recherche-en-eau-iwri">
+                    <img loading="lazy" src="assets/img/logos/iwri.webp" alt="IWRI">
+                  </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="https://www.ocpgroup.ma/">
+                  <img loading="lazy" src="assets/img/logos/ocp.webp" alt="OCP">
+                </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="https://abhoer.ma">
+                  <img loading="lazy" src="assets/img/logos/abhoer.webp" alt="ABH oued oum-er rbia">
+                </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="https://cirf.eauxetforets.gov.ma/">
+                  <img loading="lazy" src="assets/img/logos/anef.webp" alt="ANEF">
+                </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="http://www.hydrosciences.org/">
+                  <img loading="lazy" src="assets/img/logos/hsm.webp" alt="HSM">
+                </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="https://www.cesbio.cnrs.fr/">
+                  <img loading="lazy" src="assets/img/logos/cesbio.webp" alt="CESBIO">
+                </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="https://www.uca.ma/">
+                  <img loading="lazy" src="assets/img/logos/cadi ayyad.webp" alt="UCA">
+                </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="https://www.uiz.ac.ma/">
+                  <img loading="lazy" src="assets/img/logos/uiz.webp" alt="UIZ">
+                </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="https://www.usms.ac.ma/">
+                  <img loading="lazy" src="assets/img/logos/usms.webp" alt="USMS">
+                </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="https://abht.ma/ar/">
+                  <img loading="lazy" src="assets/img/logos/abht.webp" alt="ABHT">
+                </a>
+              </div>
+
+              <div class="swiper-slide partners">
+                <a href="https://www.uqtr.ca/">
+                  <img loading="lazy" src="assets/img/logos/uqtr.webp" alt="UQTR">
+                </a>
+              </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ======= Contact Section ======= -->
+
+    <!-- <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>A108 Adam Street, New York, NY 535022</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+1 5589 55488 55</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h4>Our Location</h4>
+            <p>
+              Lot 660, Hay Moulay Rachid
+              Ben Guerir 43150, Morocco
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h4>Our Email</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="mailto:crsa@um6p.ma">CRSA@UM6P.MA</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="mailto:morsnow@um6p.ma">MORSNOW@UM6P.MA</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h4>Our channels</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://crsa.um6p.ma/">CRSA website</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.linkedin.com/company/crsa-um6p/">CRSA @ LinkedIn</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="copyright-wrap py-4">
+        <div class="me-md-auto text-center">
+          <div class="copyright">
+            MorSnow by <a href="https://crsa.um6p.ma/" style="color:white"><strong><span>CRSA</span></strong></a> &copy; 2023. All Rights Reserved
+          </div>
+          
+        </div>
+        
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/leaflet.js"></script>
+  
+  <script>
+    var swiper1 = new Swiper('.experimental-sliders', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        }
+    });
+
+    var swiper2 = new Swiper('.publications-slider', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        }
+    });
+
+    var swiper3 = new Swiper('.partners-slider', {
+        slidesPerView: 6,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        }
+    });
+
+    var swiper4 = new Swiper('.chapters-slider', {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false
+        }
+    });
+    
+    var swiper5 = new Swiper('.communications-slider', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        }
+    });
+    
+  </script>
+  
+  <script>
+
+    var sites_map = L.map('sites_map').setView([31.89621446335144, -6.910400390625001], 7);
+
+// Set the bounds for your GIF
+    var bounds = [[32.62, -9.08 ], [30.63 , -4.82]];
+    var sites = {
+        "type": "FeatureCollection",
+        "crs": {
+            "type": "name",
+            "properties": {
+                "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+            }
+        },
+        "features": [
+            {
+                "type": "Feature",
+                "properties": {
+                    "Name": "Jbel Rat",
+                    "alt": "2900m",
+                    "sca": "86 days"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-6.719, 31.519]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "Name": "Jbel Azourki",
+                    "alt": "2786m",
+                    "sca": "110 days"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-6.283, 31.766]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "Name": "Jbel Azourki",
+                    "alt": "2476m",
+                    "sca": "61 days"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-6.21682, 31.79628]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "Name": "Jbel Azourki",
+                    "alt": "2609m",
+                    "sca": "49 days"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-6.18992, 31.81497]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "Name": "Jbel Oumaskar",
+                    "alt": "2105m",
+                    "sca": "33 days"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-5.327, 32.401]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "Name": "Timhdit",
+                    "alt": "2144m",
+                    "sca": "39 days"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-5.072197, 33.027281]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "Name": "Jbel Hayane",
+                    "alt": "1931m",
+                    "sca": "35 days"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-5.167934, 33.098212]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "Name": "Jbel Hayane",
+                    "alt": "2055m",
+                    "sca": "27 days"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-5.193761, 32.975641]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "Name": "Jbel Hayane",
+                    "alt": "2089m",
+                    "sca": "38 days"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-5.149487, 32.998614]
+                }
+            },
+            
+        ]
+    };
+
+    var icon = L.divIcon({
+        className: 'custom-icon',
+        html: '<i class="sites"></i>'
+    });
+    // Add a custom image overlay using L.imageOverlay
+    var gifOverlay = L.imageOverlay('assets/img/f.gif', bounds, {
+        opacity: 0.8,
+    }).addTo(sites_map);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXlvdWJib3VpaDIiLCJhIjoiY2xocmxreWtmMGc5ejN1b2E5cnhpNTBrMCJ9.6lKLvEE93ndAuKfz1C0lUg', {
+        
+    }).addTo(sites_map);
+    L.geoJSON(sites, {
+            onEachFeature: function (feature, layer) {
+                var popupText = 'Name: ' + feature.properties.Name+"<br/>Elevation: "+feature.properties.alt+"<br/>Snow cover average: "+feature.properties.sca;
+                layer.bindTooltip(popupText, { sticky: true });
+                layer.on('mouseover', function (e) {
+                    layer.bindTooltip(popupText).openTooltip();
+                });
+                // Remove tooltip on mouseout
+                layer.on('mouseout', function (e) {
+                    layer.closeTooltip();
+                });
+            },
+            pointToLayer: function (feature, latlng) {
+                return L.marker(latlng,{ icon: icon } ); //
+            },
+        }).addTo(sites_map);
+        
+    document.querySelector(".leaflet-control-attribution").style.display="none";
+  </script>
 
 
-
-
-
-
-<!-- Scroll to top button Start -->
-<!-- <a href="#" class="scroll-to-top"><i class="fas fa-chevron-up"></i></a>	 -->
-<!-- Scroll to top button End -->
-
-
-
-<!-- Jquery -->
-<script src="js/jquery.min.js"></script>
-
-<!-- Plugins JS-->
-<script src="js/plugins.js" defer></script>	
-
-<!-- Navbar JS -->
-<script src="js/navigation.js" defer></script>
-<script src="js/navigation.fixed.js" defer></script>
-
-<!-- Google Map -->
-<!--<script src="js/map.js" defer></script>-->
-
-<!-- Main JS -->
-<script src="js/main.js" defer></script>
-
-
-<script>
-	
-     
-	// Check for IntersectionObserver support
-	if ('IntersectionObserver' in window) {
-	  document.addEventListener("DOMContentLoaded", function() {
-	
-		function handleIntersection(entries) {
-		  entries.map((entry) => {
-			if (entry.isIntersecting) {
-			  // Item has crossed our observation
-			  // threshold - load src from data-src
-			  entry.target.style.backgroundImage = "url('"+entry.target.dataset.bgimage+"')";
-			  // Job done for this item - no need to watch it!
-			  observer.unobserve(entry.target);
-			}
-		  });
-		}
-	
-		
-		const observer = new IntersectionObserver(
-		  handleIntersection,
-		  { rootMargin: "100px" }
-		);
-		const footer = document.querySelectorAll('#contact');
-		footer.forEach( footer => observer.observe(footer));
-
-		const slides = document.querySelectorAll('.swiper-slide');
-		slides.forEach(slides => observer.observe(slides));
-
-		
-	  });
-	} else {
-	  // No interaction support? Load all background images automatically
-	  const headers = document.querySelectorAll('#contact');
-	  headers.forEach(header => {
-		header.style.backgroundImage = "url('"+header.dataset.bgimage+"')";
-	  });
-	}
-	</script>
-<script>
-	
-		$(".ti-angle-right").addClass("fa fa-arrow-right");
-		$(".ti-angle-right").removeClass("ti-angle-right");
-		$(".ti-angle-left").addClass("fa fa-arrow-left");
-		$(".ti-angle-left").removeClass("ti-angle-left");
-	
-</script>
 </body>
 </html>
