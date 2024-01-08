@@ -167,7 +167,6 @@
     window.addEventListener('load', () => {
       preloader.remove();
       document.querySelector("#portfolio-flters li").click();
-      console.log("DONE2",document.querySelector(".filter-active"))
     });
   }
 
@@ -229,8 +228,6 @@
           AOS.refresh()
         });
       }, true);
-      console.log("iso", portfolioIsotope);
-      // portfolioIsotope.isotope({ filter: ':first' });
     }
 
 

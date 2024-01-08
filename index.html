@@ -152,13 +152,13 @@
       <section id="vision" class="services section-bg">
         <div class="container" data-aos="fade-up">
           <div class="row gy-4">
-           <div class="col-6 center-holder">
+           <div class="col-md-6 center-holder">
             <div class="experimental-works-img">
               <img height="*" width="*" loading="lazy"  src="assets/img/content/home/mission.webp" class="rounded-border" alt="img">
             </div>
 
           </div>
-           <div class="col-6">
+           <div class="col-md-6 ">
             <p>The MorSnow Project will directly compensate for the gap in ground data. MorSnow will develop decision support tools for improving water resources management, from experimental to larger basins, by integrating satellites images into hydrological models to quantify and forecast water balance components in the upstream parts of reservoirs and basins in Morocco. The research in MorSnow focuses on:
               <ul class="vision-list">
                 <li><i class="bi bi-check-circle"></i> Measuring the meteorological and snowpack parameters and analyzing their spatial and temporal dynamics by using both automatic records and field surveys.</li>
@@ -1182,22 +1182,38 @@
     });
 
     var swiper2 = new Swiper('.publications-slider', {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30,
         },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-        }
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+      },
+      loop: true,
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+      },
+      autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+      }
     });
 
     var swiper3 = new Swiper('.partners-slider', {
-        slidesPerView: 6,
-        spaceBetween: 10,
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 6,
+          spaceBetween: 40,
+        },
+      },
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -1210,8 +1226,16 @@
     });
 
     var swiper4 = new Swiper('.chapters-slider', {
-        slidesPerView: 2,
-        spaceBetween: 10,
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+      },
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -1224,8 +1248,16 @@
     });
     
     var swiper5 = new Swiper('.communications-slider', {
-        slidesPerView: 3,
-        spaceBetween: 10,
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+      },
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -1243,7 +1275,6 @@
 
     var sites_map = L.map('sites_map').setView([31.89621446335144, -6.910400390625001], 7);
 
-// Set the bounds for your GIF
     var bounds = [[32.62, -9.08 ], [30.63 , -4.82]];
     var sites = {
         "type": "FeatureCollection",
@@ -1371,13 +1402,17 @@
         html: '<i class="sites"></i>'
     });
     // Add a custom image overlay using L.imageOverlay
-    var gifOverlay = L.imageOverlay('assets/img/f.gif', bounds, {
-        opacity: 0.8,
-    }).addTo(sites_map);
-
+    // var gifOverlay = L.imageOverlay('assets/img/f.gif', bounds, {
+    //     opacity: 0.8,
+    // }).addTo(sites_map);
+    
+    
     L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYXlvdWJib3VpaDIiLCJhIjoiY2xocmxreWtmMGc5ejN1b2E5cnhpNTBrMCJ9.6lKLvEE93ndAuKfz1C0lUg', {
+
         
     }).addTo(sites_map);
+    var videoUrl = 'assets/video.mp4';
+    var video = L.videoOverlay(videoUrl, bounds,{opacity:0.8,loop:true} ).addTo(sites_map);
     L.geoJSON(sites, {
             onEachFeature: function (feature, layer) {
                 var popupText = 'Name: ' + feature.properties.Name+"<br/>Elevation: "+feature.properties.alt+"<br/>Snow cover average: "+feature.properties.sca;
@@ -1396,6 +1431,19 @@
         }).addTo(sites_map);
         
     document.querySelector(".leaflet-control-attribution").style.display="none";
+    vid = document.querySelector("video.leaflet-image-layer");
+    vid.play();
+    document.addEventListener('load', function(){
+      
+      vid.play();
+      console.log("Load");
+    });
+    // document.addEventListener('DOMContentLoaded', function(){
+
+    //   vid.play();
+    //   console.log("DOMContentLoaded");
+    // });
+    
   </script>
 
 

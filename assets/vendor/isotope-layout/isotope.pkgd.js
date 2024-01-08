@@ -3042,7 +3042,6 @@ var trim = String.prototype.trim ?
     this.modes = {};
     // start filteredItems with all items
     this.filteredItems = [this.items[0]];
-    console.log("filteredItems 0 ", this.items[0])
     // keep of track of sortBys
     this.sortHistory = [ 'original-order' ];
     // create from registered layout modes
