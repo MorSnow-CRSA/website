@@ -12,10 +12,12 @@
 :root{
   --primary: #2387ea;
   --crsa: #21437f;
+  --um6p:#2d2d2e;
+  --um6p-ligth:#828F9C;
 }
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
+  font-family: "inter", sans-serif;
+  color: var(--um6p);
 }
 
 a {
@@ -185,7 +187,7 @@ h6 {
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   font-weight: 700;
-  color: #222;
+  color: #828F9C;
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
@@ -594,7 +596,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #5846f9;
+  background: var(--primary);
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -974,7 +976,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #5846f9;
+  background: var(--primary);
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1157,7 +1159,7 @@ section {
   font-size: 36px;
   color: #5846f9;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+  font-family: "inter", sans-serif;
   margin-bottom: 20px;
 }
 
@@ -1214,7 +1216,7 @@ section {
   transition: none;
   font-size: 15px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "inter", sans-serif;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -1280,7 +1282,7 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: "Roboto", sans-serif;
+  font-family: "inter", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -1519,7 +1521,7 @@ section {
 #footer {
   color: #fff;
   font-size: 14px;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
+  background: var(--crsa);
   background-size: cover;
 }
 
@@ -1796,14 +1798,14 @@ section#experimental .container > .row, section#events .container > .row {
 
 .service-block h4 {
   display: inline-block;
-  color: #222;
+  color: #2d2d2e;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.5
 }
 
 .service-block h4 a {
-  color: #222
+  color: #2d2d2e
 }
 
 .service-block h4 a:hover {
@@ -1823,7 +1825,7 @@ section#experimental .container > .row, section#events .container > .row {
 
 .service-block-button a {
   display: inline-block;
-  color: #222;
+  color: #2d2d2e;
   font-size: 14px;
   font-weight: 600;
   /* margin-top: 17px; */
