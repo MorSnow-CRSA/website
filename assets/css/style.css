@@ -1521,7 +1521,11 @@ section {
 #footer {
   color: #fff;
   font-size: 14px;
+<<<<<<< HEAD
   background: var(--crsa);
+=======
+  background: #2387eade;
+>>>>>>> be2e2596872a872443524072f2a97e6108da5aa7
   background-size: cover;
 }
 
